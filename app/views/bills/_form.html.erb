@@ -1,0 +1,38 @@
+<%= form_for @bill, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> /Bill</legend>
+
+    <div class="control-group">
+      <%= f.label :subcategory_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :subcategory_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :quantity, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :quantity, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :customer_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :customer_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :TotalAmt, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :TotalAmt, :class => 'text_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', bills_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

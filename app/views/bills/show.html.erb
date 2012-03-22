@@ -1,0 +1,27 @@
+<h1>/Bill</h1>
+
+<p>
+  <b>Subcategory</b><br>
+  <%= @bill.subcategory_id %>
+</p>
+
+<p>
+  <b>Quantity</b><br>
+  <%= @bill.quantity %>
+</p>
+
+<p>
+  <b>Customer</b><br>
+  <%= @bill.customer_id %>
+</p>
+
+<p>
+  <b>Totalamt</b><br>
+  <%= @bill.TotalAmt %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', bills_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_bill_path(@bill), :class => 'btn' %>
+  <%= link_to 'Delete', bill_path(@bill), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

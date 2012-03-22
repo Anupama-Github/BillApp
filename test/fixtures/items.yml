@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  item_id: 1
+  length: 1
+  breadth: 1
+  custom_id: 1
+
+two:
+  name: MyString
+  item_id: 1
+  length: 1
+  breadth: 1
+  custom_id: 1

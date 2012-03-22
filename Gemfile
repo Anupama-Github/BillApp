@@ -4,6 +4,7 @@ group :production do
 end
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'rails', '3.2.1'
+gem 'twitter-bootstrap-rails'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -30,7 +31,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem "tabletastic"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -49,3 +50,4 @@ gem 'jquery-rails'
 gem "devise"
 gem "jquery-rails"
 gem "haml", ">= 3.0.0"
+gem 'best_in_place'

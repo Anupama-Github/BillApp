@@ -1,0 +1,12 @@
+class CreateSubcategories < ActiveRecord::Migration
+  def change
+    create_table :subcategories do |t|
+      t.integer :item_id
+      t.integer :length
+      t.integer :breadth
+      t.integer :customid
+
+      t.timestamps
+    end
+  end
+end

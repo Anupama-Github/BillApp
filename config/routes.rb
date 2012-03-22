@@ -1,4 +1,12 @@
 BillApp::Application.routes.draw do
+  resources :items
+
+  resources :stocks
+
+  resources :customers
+
+  resources :bills
+
   get "home/index"
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'

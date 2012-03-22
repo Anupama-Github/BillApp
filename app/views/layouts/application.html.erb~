@@ -65,7 +65,7 @@
     <button class="btn dropdown-toggle">
     <span class="caret"></span>
     </button>
-      <ul class="btn hover">
+      <ul class="btn">
         <li>Some more Action</li>
       </ul>
      </li>

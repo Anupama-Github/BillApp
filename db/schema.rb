@@ -11,7 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120316195056) do
+ActiveRecord::Schema.define(:version => 20120320072734) do
+
+  create_table "bills", :force => true do |t|
+    t.integer  "subcategory_id"
+    t.integer  "quantity"
+    t.integer  "customer_id"
+    t.decimal  "TotalAmt"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  create_table "customers", :force => true do |t|
+    t.string   "name"
+    t.text     "address"
+    t.integer  "phone_no"
+    t.string   "email_id"
+    t.string   "CompanyName"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "items", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "length"
+    t.integer  "breadth"
+    t.integer  "customid"
+  end
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
@@ -25,6 +53,14 @@ ActiveRecord::Schema.define(:version => 20120316195056) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
+  create_table "stocks", :force => true do |t|
+    t.integer  "subcategory_id"
+    t.integer  "quantity"
+    t.decimal  "rate"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

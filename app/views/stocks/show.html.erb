@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Subcategory:</b>
+  <%= @stock.subcategory_id %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @stock.quantity %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%= @stock.rate %>
+</p>
+
+
+<%= link_to 'Edit', edit_stock_path(@stock) %> |
+<%= link_to 'Back', stocks_path %>

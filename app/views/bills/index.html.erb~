@@ -3,8 +3,10 @@
   <thead>
     <tr>
       <th>ID</th>
-      <th>Subcategory</th>
+      <th>ItemID</th>
       <th>Created at</th>
+      <th>Quantity</th>
+      <th>TotalAmt</th>  
       <th>Actions</th>
     </tr>
   </thead>
@@ -12,8 +14,10 @@
     <% @bills.each do |bill| %>
       <tr>
         <td><%= bill.id %></td>
-        <td><%= best_in_place @bill, :subcategory_id %></td>
+        <td><%= best_in_place bill, :item_id %></td>
         <td><%= bill.created_at %></td>
+        <td><%= bill.quantity %></td>
+	<td><%= bill.TotalAmt %></td>
         <td>
           <%= link_to 'Edit', edit_bill_path(bill), :class => 'btn btn-mini' %>
           <%= link_to 'Destroy', bill_path(bill), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>

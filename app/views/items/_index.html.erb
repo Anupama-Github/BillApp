@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Item</th>
+    <th>Length</th>
+    <th>Breadth</th>
+    <th>Custom</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @items.each do |item| %>
+  <tr>
+    <td><%= item.name %></td>
+    <td><%= item.item_id %></td>
+    <td><%= item.length %></td>
+    <td><%= item.breadth %></td>
+    <td><%= item.custom_id %></td>
+    <td><%= link_to 'Show', item %></td>
+    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+

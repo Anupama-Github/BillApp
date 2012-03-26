@@ -14,9 +14,13 @@
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
+     .hor li{
+          display: inline;
+      }
     </style>
     <%= stylesheet_link_tag "application", :media => "all" %>
-
+    <%= stylesheet_link_tag "custom" %>
+     
     <!-- Le fav and touch icons -->
     <link href="images/favicon.ico" rel="shortcut icon">
     <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
@@ -26,6 +30,7 @@
  <%= javascript_include_tag "http://twitter.github.com/bootstrap/1.4.0/bootstrap-buttons.js"       %>
  <%= javascript_include_tag "http://twitter.github.com/bootstrap/1.4.0/bootstrap-twipsy.js" %>
  <%= javascript_include_tag "http://twitter.github.com/bootstrap/1.4.0/bootstrap-popover.js" %>
+ <%= javascript_include_tag "autocomplete-rails.js" %>
  <%= csrf_meta_tags %>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js">
  $(function () {
@@ -41,21 +46,48 @@
  </head>
 
   <body>
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-         <div class="container">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">BillApp</a>
-          </div>
-        </div> 
-      </div>              
- 
-<div class="topbar-inner container-fluid"></div>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+      <div class="container-fluid">
+        <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a href="#" class="brand">Bill App</a>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="active"><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">Wood <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                    <a href="#">Teak 1ST <i class="icon-arrow-right"></i></a>
+                    <ul class="dropdown-menu sub-menu">
+                        <li class="hor"><a href="#">Action</a></li>
+                        <li class="hor"><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="nav-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="nav-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+         </div>
+        </div>
+       </div> 
     <div class="container">
       <div class="content">
         <div class="row">
@@ -70,6 +102,9 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
+
+
     <%= javascript_include_tag "application" %>
 
   </body>

@@ -980,6 +980,7 @@ input:focus:required:invalid:focus, textarea:focus:required:invalid:focus, selec
 .form-search .hide, .form-inline .hide, .form-horizontal .hide {
   display: none;
 }
+
 .form-search label,
 .form-inline label,
 .form-search .input-append,
@@ -2339,6 +2340,12 @@ button.btn.small, input[type="submit"].btn.small {
   margin-top: 1px;
   border-width: 1px;
 }
+
+.nav-tabs .dropdown-menuright, .nav-pills .dropdown-menu {
+  margin-top: 1px;
+  border-width: 1px;
+}
+
 .nav-pills .dropdown-menu {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -3516,3 +3523,10 @@ a.thumbnail:hover {
 .invisible {
   visibility: hidden;
 }
+
+ .hor li{
+display: inline;
+float: left;
+
+}
+

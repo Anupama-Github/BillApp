@@ -9,8 +9,8 @@ autocomplete  :items, :name
      # format.html # index.html.erb
       #format.json { render json: @items }
     #end
-     #@items = Item.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
-     @items = Item.search(params[:search]).order(:name) 
+     @items = Item.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
+     
   end
 
   # GET /items/1

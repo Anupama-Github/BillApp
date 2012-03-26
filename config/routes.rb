@@ -5,9 +5,17 @@ BillApp::Application.routes.draw do
 
   resources :customers
 
-  resources :bills
+  resources :bills  do
+  get :autocomplete_bill_quantity, :on => :collection
+  end
+
+ resources :items do
+  get :autocomplete_item_name, :on => :collection
+ end
+
 
   get "home/index"
+  
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 

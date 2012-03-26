@@ -980,6 +980,7 @@ input:focus:required:invalid:focus, textarea:focus:required:invalid:focus, selec
 .form-search .hide, .form-inline .hide, .form-horizontal .hide {
   display: none;
 }
+
 .form-search label,
 .form-inline label,
 .form-search .input-append,
@@ -3522,3 +3523,10 @@ a.thumbnail:hover {
 .invisible {
   visibility: hidden;
 }
+
+ .hor li{
+display: inline;
+float: left;
+
+}
+

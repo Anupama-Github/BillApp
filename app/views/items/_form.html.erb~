@@ -16,7 +16,7 @@ f.autocomplete_field :item_name, autocomplete_items_name_items_path
     <%= f.label :name %><br />
   <!-- <%= f.text_field :name %>
     <%= text_field_with_auto_complete :item, name %>-->
-     f.autocomplete_field :name, autocomplete_item_name_items_path
+     f.autocomplete_field :item_name, autocomplete_item_name_items_path
   </div>
  
 

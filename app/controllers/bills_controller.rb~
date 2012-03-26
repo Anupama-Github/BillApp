@@ -35,7 +35,7 @@ autocomplete :bill, :quantity, :full => false
 
   # GET /bills/1/edit
   def edit
-    @bill = Bill.find(params[:id])
+    @bill = Bill.find(params[:item_id])
   end
 
   # POST /bills

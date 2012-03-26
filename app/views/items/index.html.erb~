@@ -9,7 +9,6 @@
 <!--    <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>-->
     <%= text_field_tag 'search', nil, :class => 'search-query ui-autocomplete-input', :placeholder => 'Search', data: {autocomplete_source: @items.map(&:name)} %> 
-   
      </p>
   <div id="items"><%= render 'index' %></div>
 <% end %>

@@ -1,15 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  name: MyString
-  item_id: 1
-  length: 1
-  breadth: 1
-  custom_id: 1
+  bill_id: 1
+  product_id: 1
+  sold_qty: MyString
+  rate: MyString
 
 two:
-  name: MyString
-  item_id: 1
-  length: 1
-  breadth: 1
-  custom_id: 1
+  bill_id: 1
+  product_id: 1
+  sold_qty: MyString
+  rate: MyString

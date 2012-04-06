@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 group :production do
   gem 'unicorn'
 end
+
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'rails', '3.2.1'
 gem 'twitter-bootstrap-rails'
@@ -52,3 +53,4 @@ gem "devise"
 gem "jquery-rails"
 gem "haml", ">= 3.0.0"
 gem 'best_in_place'
+gem 'simple_form'

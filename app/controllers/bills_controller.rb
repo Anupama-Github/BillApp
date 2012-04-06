@@ -1,5 +1,6 @@
 class BillsController < ApplicationController
-autocomplete :bill, :quantity, :full => false
+  autocomplete :bill, :code, :column_name => "code"
+ 
   # GET /bills
   # GET /bills.json
   def index

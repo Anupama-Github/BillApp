@@ -1,27 +1,36 @@
-<table>
+<table class="table table-striped" >
+ <thead>
   <tr>
-    <th>Name</th>
-    <th>Item</th>
-    <th>Length</th>
-    <th>Breadth</th>
-    <th>Custom</th>
+    <th><%= sortable "ProductName" %></th>
+<!--    <th><%= sortable "item_id" %></th>-->
+    <th><%= sortable "QuantitySold"%></th>
+ 
+    <th><%= sortable "custom_id" %></th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-
+ </thead>
+ <tbody>
 <% @items.each do |item| %>
   <tr>
-    <td><%= item.name %></td>
-    <td><%= item.item_id %></td>
-    <td><%= item.length %></td>
-    <td><%= item.breadth %></td>
-    <td><%= item.custom_id %></td>
+    <td><%= best_in_place item, :product.name %></td>
+    <td><%= best_in_place item, :sold_qty %></td>
+    <td><%= best_in_place item, :rate %></td>
     <td><%= link_to 'Show', item %></td>
-    <td><%= link_to 'Edit', edit_item_path(item) %></td>
-    <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
+   <td><%= link_to 'Edit', edit_item_path(item) %></td>
+ <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
+ </tbody>
 </table>
+
+<%= render 'form1' %>
+
+
+
+
+
+
 
 

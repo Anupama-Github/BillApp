@@ -11,13 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120323112021) do
+ActiveRecord::Schema.define(:version => 20120404111840) do
 
   create_table "bills", :force => true do |t|
-    t.integer  "item_id"
-    t.integer  "quantity"
-    t.integer  "customer_id"
-    t.decimal  "TotalAmt"
+    t.string   "code"
+    t.text     "Particulars"
+    t.string   "mm"
+    t.string   "size"
+    t.string   "length"
+    t.string   "no"
+    t.string   "feet"
+    t.string   "cft"
+    t.string   "sqft"
+    t.string   "rate"
+    t.string   "amt"
+    t.string   "vat"
+    t.string   "vatamt"
+    t.string   "amount"
+    t.string   "balance"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -25,22 +36,27 @@ ActiveRecord::Schema.define(:version => 20120323112021) do
   create_table "customers", :force => true do |t|
     t.string   "name"
     t.text     "address"
-    t.integer  "phone_no"
-    t.string   "email_id"
-    t.string   "CompanyName"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "phoneno"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "items", :force => true do |t|
-    t.string   "name"
-    t.integer  "item_id"
-    t.integer  "length"
-    t.integer  "breadth"
-    t.integer  "custom_id"
+    t.integer  "bill_id"
+    t.integer  "product_id"
+    t.string   "sold_qty"
+    t.string   "rate"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "bill_id"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.string   "size"
+    t.string   "code"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "rails_admin_histories", :force => true do |t|
@@ -57,11 +73,11 @@ ActiveRecord::Schema.define(:version => 20120323112021) do
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
 
   create_table "stocks", :force => true do |t|
-    t.integer  "item_id"
-    t.integer  "quantity"
-    t.decimal  "rate"
+    t.integer  "product_id"
+    t.decimal  "quantity"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "cost"
   end
 
   create_table "users", :force => true do |t|

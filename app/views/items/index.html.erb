@@ -1,18 +1,35 @@
-<h1>Listing items</h1>
+<table class="table table-striped" >
+ <thead>
+  <tr>
+    
+    <th><%= sortable "name" %></th>
+    <th><%= sortable "sold_qty" %></th>
+    <th><%= sortable "rate" %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+     <tr>
+    
+       <td><%= item.product.name %></td>
+       <td><%= item.sold_qty %></td>
+       <td><%= item.rate %></td>
+       <td><%= link_to 'Show', item %></td>
+       <td><%= link_to 'Edit', edit_item_path(item) %></td>
+       <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
+     </tr> 
+    <% end %>
+
+  </tbody>
+  
+</table>
 
 <br />
-
-<%= link_to 'New Item', new_item_path %>
-<br/><br/>
-<%= form_tag items_path, :method => 'get', :id => "items_search" do %>
-  <p>
-<!--    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>-->
-    <%= text_field_tag 'search', nil, :class => 'search-query ui-autocomplete-input', :placeholder => 'Search', data: {autocomplete_source: @items.map(&:name)} %> 
-   
-     </p>
-  <div id="items"><%= render 'index' %></div>
-<% end %>
-
+ <%= render 'form1' %>  
+<!-- <%= link_to 'New Item', new_item_path %> -->
 
 

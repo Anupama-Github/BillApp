@@ -2,9 +2,18 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 jQuery ->  
-   $('#items').autocomplete  
+   $('#search').autocomplete  
    source: $('#search').data('autocomplete-source')  
 
-
+$(function() {
+  $("#items th a").live("click", function() {
+   $.getScript(this.href);
+    return false;
+  });
+  $("#items_search input").keyup(function() {
+   $.get($("#items_search").attr("action"), $("#iems_search").serialize(),null, "script");
+   return false;
+   });
+});
 
 

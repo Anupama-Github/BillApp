@@ -1,11 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  subcategory_id: 1
-  quantity: 1
-  rate: 9.99
+  product_id: 1
+  quantity: 9.99
 
 two:
-  subcategory_id: 1
-  quantity: 1
-  rate: 9.99
+  product_id: 1
+  quantity: 9.99

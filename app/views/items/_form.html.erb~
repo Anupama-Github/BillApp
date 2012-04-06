@@ -1,5 +1,4 @@
-<%= form_for(@item) do |f| %>
-f.autocomplete_field :item_name, autocomplete_items_name_items_path
+<%= form_for @item, :html => { :class => ' well form-inline' } do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
@@ -12,31 +11,29 @@ f.autocomplete_field :item_name, autocomplete_items_name_items_path
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-  <!-- <%= f.text_field :name %>
-    <%= text_field_with_auto_complete :item, name %>-->
-     f.autocomplete_field :item_name, autocomplete_item_name_items_path
-  </div>
- 
+<div class="field">
+    <%= f.label :product_id %>
+   <%= f.collection_select :product_id, Product.all, :id, :name %> 
+</div>
 
-  <div class="field">
-    <%= f.label :item_id %><br />
-    <%= f.number_field :item_id %>
-  </div>
-  <div class="field">
-    <%= f.label :length %><br />
-    <%= f.number_field :length %>
-  </div>
-  <div class="field">
-    <%= f.label :breadth %><br />
-    <%= f.number_field :breadth %>
-  </div>
-  <div class="field">
-    <%= f.label :custom_id %><br />
-    <%= f.number_field :custom_id %>
-  </div>
-  <div class="actions">
+<div class="field">
+    <%= f.label :product_id %>
+   <%= f.collection_select :product_id, Product.all, :id, :size %> 
+</div>
+
+<div class="field">
+    <%= f.label :sold_qty %>
+   <%= f.text_field :sold_qty %> 
+</div>
+
+<div class="field">
+    <%= f.label :rate %>
+   <%= f.text_field :rate %> 
+</div>
+
+<div class="actions">
     <%= f.submit %>
-  </div>
+</div>
+
 <% end %>
+

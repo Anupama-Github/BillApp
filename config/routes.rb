@@ -1,4 +1,6 @@
 BillApp::Application.routes.draw do
+  resources :products
+
   resources :items
 
   resources :stocks
@@ -6,12 +8,10 @@ BillApp::Application.routes.draw do
   resources :customers
 
   resources :bills  do
-  get :autocomplete_bill_quantity, :on => :collection
+    get :autocomplete_bill_code, :on => :collection
   end
 
- resources :items do
-  get :autocomplete_item_name, :on => :collection
- end
+
 
 
   get "home/index"

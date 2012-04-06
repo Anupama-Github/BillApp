@@ -1,30 +1,50 @@
-<h1>Bills</h1>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>ItemID</th>
-      <th>Created at</th>
-      <th>Quantity</th>
-      <th>TotalAmt</th>  
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @bills.each do |bill| %>
-      <tr>
-        <td><%= bill.id %></td>
-        <td><%= best_in_place bill, :item_id %></td>
-        <td><%= bill.created_at %></td>
-        <td><%= bill.quantity %></td>
-	<td><%= bill.TotalAmt %></td>
-        <td>
-          <%= link_to 'Edit', edit_bill_path(bill), :class => 'btn btn-mini' %>
-          <%= link_to 'Destroy', bill_path(bill), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
+<h1>Listing bills</h1>
+<table>
+  <tr>
+    <th>Code</th>
+    <th>Particulars</th>
+    <th>Mm</th>
+    <th>Size</th>
+    <th>Length</th>
+    <th>No</th>
+    <th>Feet</th>
+    <th>Cft</th>
+    <th>Sqft</th>
+    <th>Rate</th>
+    <th>Amt</th>
+    <th>Vat</th>
+    <th>Vatamt</th>
+    <th>Amount</th>
+    <th>Balance</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bills.each do |bill| %>
+  <tr>
+    <td><%= bill.code %></td>
+    <td><%= bill.Particulars %></td>
+    <td><%= bill.mm %></td>
+    <td><%= bill.size %></td>
+    <td><%= bill.length %></td>
+    <td><%= bill.no %></td>
+    <td><%= bill.feet %></td>
+    <td><%= bill.cft %></td>
+    <td><%= bill.sqft %></td>
+    <td><%= bill.rate %></td>
+    <td><%= bill.amt %></td>
+    <td><%= bill.vat %></td>
+    <td><%= bill.vatamt %></td>
+    <td><%= bill.amount %></td>
+    <td><%= bill.balance %></td>
+    <td><%= link_to 'Show', bill %></td>
+    <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
+    <td><%= link_to 'Destroy', bill, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
 </table>
 
-<%= link_to 'New', new_bill_path, :class => 'btn btn-primary' %>
+<br />
+
+<%= link_to 'New Bill', new_bill_path %>

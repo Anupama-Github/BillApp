@@ -1,40 +1,78 @@
-<%= form_for @bill, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for @bill,{:class => "form-inline"} do |f|  %>
 
-  <fieldset>
-    <legend><%= controller.action_name.capitalize %> /Bill</legend>
+  <% if @bill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
 
-    <div class="control-group">
-      <%= f.label :item_id, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.number_field :item_id, :class => 'number_field' %>
-      </div>
+      <ul>
+      <% @bill.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
     </div>
-
-    <div class="control-group">
-      <%= f.label :quantity, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.number_field :quantity, :class => 'number_field' %>
-        <%= f.autocomplete_field :quantity, autocomplete_bill_quantity_bills_path %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :customer_id, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.number_field :customer_id, :class => 'number_field' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :TotalAmt, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.text_field :TotalAmt, :class => 'text_field' %>
-      </div>
-    </div>
-
-    <div class="form-actions">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
-      <%= link_to 'Cancel', bills_path, :class => 'btn' %>
-    </div>
-  </fieldset>
+  <% end %>
+ 
+  <div class="field">
+    <%= f.label :code %>
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :Particulars %>
+    <%= f.text_area :Particulars %>
+  </div>
+  <div class="field">
+    <%= f.label :mm %>
+    <%= f.text_field :mm %>
+  </div>
+  <div class="field">
+    <%= f.label :size %>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :length %>
+    <%= f.text_field :length %>
+  </div>
+  <div class="field">
+    <%= f.label :no %>
+    <%= f.text_field :no %>
+  </div>
+  <div class="field">
+    <%= f.label :feet %>
+    <%= f.text_field :feet %>
+  </div>
+  <div class="field">
+    <%= f.label :cft %>
+    <%= f.text_field :cft %>
+  </div>
+  <div class="field">
+    <%= f.label :sqft %>
+    <%= f.text_field :sqft %>
+  </div>
+  <div class="field">
+    <%= f.label :rate %>
+    <%= f.text_field :rate %>
+  </div>
+  <div class="field">
+    <%= f.label :amt %>
+    <%= f.text_field :amt %>
+  </div>
+  <div class="field">
+    <%= f.label :vat %>
+    <%= f.text_field :vat %>
+  </div>
+  <div class="field">
+    <%= f.label :vatamt %>
+    <%= f.text_field :vatamt %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :balance %>
+    <%= f.text_field :balance %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

@@ -1,13 +1,35 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  subcategory_id: 1
-  quantity: 1
-  customer_id: 1
-  TotalAmt: 9.99
+  code: MyString
+  Particulars: MyText
+  mm: MyString
+  size: MyString
+  length: MyString
+  no: MyString
+  feet: MyString
+  cft: MyString
+  sqft: MyString
+  rate: MyString
+  amt: MyString
+  vat: MyString
+  vatamt: MyString
+  amount: MyString
+  balance: MyString
 
 two:
-  subcategory_id: 1
-  quantity: 1
-  customer_id: 1
-  TotalAmt: 9.99
+  code: MyString
+  Particulars: MyText
+  mm: MyString
+  size: MyString
+  length: MyString
+  no: MyString
+  feet: MyString
+  cft: MyString
+  sqft: MyString
+  rate: MyString
+  amt: MyString
+  vat: MyString
+  vatamt: MyString
+  amount: MyString
+  balance: MyString

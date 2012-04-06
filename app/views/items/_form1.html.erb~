@@ -1,0 +1,21 @@
+<div class="row">
+
+
+  <%= form_for @item, {:class => "form-inline"} do |f| %>
+    
+    <%= f.collection_select :product_id, Product.all, :id, :name %> 
+
+    <%= f.collection_select :product_id, Product.all, :id, :size %> 
+    
+    <%= f.text_field :sold_qty, :class=> "input textbox", :placeholder=>"Sold quantity" %>
+ 
+    <%= f.text_field :Rate, :class=> "input textbox", :placeholder=>"Rate" %>
+ 
+    
+
+</div>
+<div class="actions">
+    <%= f.submit %>
+  </div>
+
+   <% end %>

@@ -1,5 +1,6 @@
 class BillsController < ApplicationController
-autocomplete :bill, :quantity, :full => false
+  autocomplete :bill, :code, :column_name => "code"
+ 
   # GET /bills
   # GET /bills.json
   def index
@@ -35,7 +36,7 @@ autocomplete :bill, :quantity, :full => false
 
   # GET /bills/1/edit
   def edit
-    @bill = Bill.find(params[:item_id])
+    @bill = Bill.find(params[:id])
   end
 
   # POST /bills

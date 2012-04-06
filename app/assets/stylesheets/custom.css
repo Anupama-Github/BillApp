@@ -42,3 +42,31 @@ float: left;
     top: 11px;
     left: -6px;
 }
+
+input,
+textarea,
+select,
+.uneditable-input {
+  display: block-inline;
+  width: 210px;
+  height: 25px;
+  padding: 4px;
+  margin-bottom: 9px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #555555;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.form-inline {
+ display: inline-block;
+ 
+ }
+
+.field{
+ display: inline-block;
+ float: left;
+}

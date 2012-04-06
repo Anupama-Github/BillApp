@@ -2,9 +2,8 @@
 
 <table>
   <tr>
-    <th>Subcategory</th>
+    <th>Product</th>
     <th>Quantity</th>
-    <th>Rate</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,9 +11,8 @@
 
 <% @stocks.each do |stock| %>
   <tr>
-    <td><%= stock.subcategory_id %></td>
+    <td><%= stock.product_id %></td>
     <td><%= stock.quantity %></td>
-    <td><%= stock.rate %></td>
     <td><%= link_to 'Show', stock %></td>
     <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
     <td><%= link_to 'Destroy', stock, confirm: 'Are you sure?', method: :delete %></td>

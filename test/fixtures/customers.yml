@@ -3,13 +3,11 @@
 one:
   name: MyString
   address: MyText
-  phone_no: 1
-  email_id: MyString
-  CompanyName: MyString
+  phoneno: MyString
+  email: MyString
 
 two:
   name: MyString
   address: MyText
-  phone_no: 1
-  email_id: MyString
-  CompanyName: MyString
+  phoneno: MyString
+  email: MyString

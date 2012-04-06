@@ -4,9 +4,8 @@
   <tr>
     <th>Name</th>
     <th>Address</th>
-    <th>Phone no</th>
+    <th>Phoneno</th>
     <th>Email</th>
-    <th>Companyname</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,9 +15,8 @@
   <tr>
     <td><%= customer.name %></td>
     <td><%= customer.address %></td>
-    <td><%= customer.phone_no %></td>
-    <td><%= customer.email_id %></td>
-    <td><%= customer.CompanyName %></td>
+    <td><%= customer.phoneno %></td>
+    <td><%= customer.email %></td>
     <td><%= link_to 'Show', customer %></td>
     <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
     <td><%= link_to 'Destroy', customer, confirm: 'Are you sure?', method: :delete %></td>

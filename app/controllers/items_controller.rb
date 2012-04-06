@@ -1,16 +1,31 @@
 class ItemsController < ApplicationController
-autocomplete  :items, :name
+helper_method :sort_column, :sort_direction, :sort_directionname
   # GET /items
   # GET /items.json
   def index
     #@items=Item.all
     #@items = Item.search(params[:search]).order(:name)
-    #respond_to do |format|
-     # format.html # index.html.erb
-      #format.json { render json: @items }
-    #end
      #@items = Item.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
-     @items = Item.search(params[:search]).order(:name) 
+     @item=Item.new
+     if params[:sort] == 'name'
+      @dir=sort_directionname
+      end
+     if params[:sort] == 'name'&& @dir =='asc'
+      @items=Item.find(:all, :include => :product, :order => 'products.name')
+     # params[:direction] =='desc'   
+     else if
+      params[:sort] == 'name'&& @dir =='desc'
+      @items=Item.find(:all, :include => :product, :order => 'products.name desc')
+      #params[:direction] =='asc'   
+     else      	
+      @items = Item.order(sort_column+" "+ sort_direction)
+     end
+     end
+     	
+         respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @items }
+        end
   end
 
   # GET /items/1
@@ -28,16 +43,18 @@ autocomplete  :items, :name
   # GET /items/new.json
   def new
     @item = Item.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @item }
     end
+    
   end
 
   # GET /items/1/edit
   def edit
     @item = Item.find(params[:id])
+   
   end
 
   # POST /items
@@ -47,7 +64,7 @@ autocomplete  :items, :name
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
+        format.html { redirect_to items_path, notice: 'Item was successfully created.' }
         format.json { render json: @item, status: :created, location: @item }
       else
         format.html { render action: "new" }
@@ -63,7 +80,7 @@ autocomplete  :items, :name
 
     respond_to do |format|
       if @item.update_attributes(params[:item])
-        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
+        format.html { redirect_to items_path, notice: 'Item was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -83,4 +100,19 @@ autocomplete  :items, :name
       format.json { head :no_content }
     end
   end
+ 
+    private
+
+   def sort_directionname
+    @dir = sort_direction == "asc" ? "desc" : "asc"
+    return @dir
+   end
+   
+   def sort_column
+     Item.column_names.include?(params[:sort]) ? params[:sort] : "rate"
+   end
+
+   def sort_direction
+     %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+   end
 end

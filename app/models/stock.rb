@@ -1,3 +1,3 @@
 class Stock < ActiveRecord::Base
-has_one :item
+belongs_to :product
 end

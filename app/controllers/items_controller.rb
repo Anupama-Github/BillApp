@@ -1,21 +1,26 @@
 class ItemsController < ApplicationController
-helper_method :sort_column, :sort_direction, :sort_directionname
+helper_method :sort_column, :sort_direction
   # GET /items
   # GET /items.json
+  @@dir='asc'
   def index
     #@items=Item.all
     #@items = Item.search(params[:search]).order(:name)
      #@items = Item.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
      @item=Item.new
-     if params[:sort] == 'name'
-      @dir=sort_directionname
-      end
-     if params[:sort] == 'name'&& @dir =='asc'
+     
+     if params[:sort] == 'name' && @@dir == 'asc'
       @items=Item.find(:all, :include => :product, :order => 'products.name')
+      @@dir='desc'
+      
+     
      # params[:direction] =='desc'   
      else if
-      params[:sort] == 'name'&& @dir =='desc'
+      params[:sort] == 'name' && @@dir =='desc'
       @items=Item.find(:all, :include => :product, :order => 'products.name desc')
+      @@dir='asc'
+      
+
       #params[:direction] =='asc'   
      else      	
       @items = Item.order(sort_column+" "+ sort_direction)
@@ -103,10 +108,7 @@ helper_method :sort_column, :sort_direction, :sort_directionname
  
     private
 
-   def sort_directionname
-    @dir = sort_direction == "asc" ? "desc" : "asc"
-    return @dir
-   end
+  
    
    def sort_column
      Item.column_names.include?(params[:sort]) ? params[:sort] : "rate"

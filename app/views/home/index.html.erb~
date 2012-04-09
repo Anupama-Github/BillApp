@@ -1,5 +1,127 @@
-<html>
-  <head>
-  <meta HTTP-EQUIV="REFRESH" content="0; url=http://billingmadeeasy.herokuapp.com/admin">
-  </head>
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Extremes Simple Example</title>
+<style type="text/css">
+body {
+font: 12px/120% Georgia, Times, serif;
+}
+* {
+margin: 0;
+padding: 0;
+}
+       a, a:link, a:visited {
+text-decoration: none;
+color: #666;
+padding: 0 5px;
+}
+a:hover {
+color: #000;
+}
+ul {
+list-style-type: none;
+display: none;
+font-size: 11px;
+margin: 0 auto;
+}
+
+
+ul.colors li {
+padding: 20px;
+font: bold 12px/130% Arial, sans-serif;
+-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+-moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+box-shadow: 0 0 5px rgba(0,0,0,0.3);
+text-transform: uppercase;
+color: #fff;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+text-shadow: rgba(0,0,0,0.4) 1px 1px 2px;
+-webkit-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+-o-transition: all 0.2s ease;
+-ms-transition: all 0.2s ease;
+}
+
+ul.colors li:hover {
+-webkit-transform: scale(1.2);
+cursor: pointer;
+}
+
+.red {background-color: #FF0000;}
+.brick {background-color: #FF3300;}
+.orange {background-color: #FF8000;}
+.yellow {background-color: #FFDD00;}
+.lime {background-color: #ABFF00;}
+.green {background-color: #45FF00;}
+.bondi {background-color: #00FF79;}
+.aqua {background-color: #00FFE0;}
+.blue {background-color: #0055FF;}
+.navy {background-color: #1800FF;}
+.purple {background-color: #7800FF;}
+.violet {background-color: #C000FF;}
+.pink {background-color: #FF00E6;}
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+<header>
+
+</header>
+
+<div id="main">
+<ul class="colors">
+<li class="red"><a href="http://localhost:3000/items">Items</a></li>
+<!--<li class="brick">Brick</li>  -->
+<li class="orange"><a href="http://localhost:3000/bills">Bills</a></li>
+<!--<li class="yellow">Yellow</li> -->
+<!--<li class="lime">Lime</li> -->
+<li class="green"><a href="http://localhost:3000/customers">Customers</a></li>
+<!--<li class="bondi">Bondi</li> -->
+<!--<li class="aqua">Aqua</li> -->
+<li class="blue"><a href="http://localhost:3000/products">Products</a></li>
+<!--<li class="navy">Navy</li> -->
+<!--<li class="purple">Purple</li> -->
+<li class="violet"><a href="http://localhost:3000/stocks">Stocks</a></li>
+<!--<li class="pink">Pink</li> -->
+</ul>
+
+</div>
+
+</div> <!-- end of #container -->
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="lib/js/libs/jquery-1.4.2.min.js"%3E%3C/script%3E'))</script>
+
+
+<!-- scripts concatenated and minified via ant build script-->
+<script src="../src/extremes.js"></script>
+<!-- end concatenated and minified scripts-->
+
+<script type="text/javascript">
+$(document).ready(function(){
+$('.simple').extremes();
+$('.colors').extremes({
+diameter: 100
+});
+})
+</script>
+
+</body>
 </html>
+
+
+

@@ -2,7 +2,7 @@
  <thead>
   <tr>
     
-    <th><%= sortbyname "name" %></th>
+    <th><%= sortable "item.product.name" %></th>
     <th><%= sortable "sold_qty" %></th>
     <th><%= sortable "rate" %></th>
     <th></th>

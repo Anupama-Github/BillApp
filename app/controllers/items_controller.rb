@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-helper_method :sort_column, :sort_direction
+helper_method :sort_column, :sort_direction, :sort_directionbyname
   # GET /items
   # GET /items.json
   @@dir='asc'
@@ -12,16 +12,16 @@ helper_method :sort_column, :sort_direction
      if params[:sort] == 'name' && @@dir == 'asc'
       @items=Item.find(:all, :include => :product, :order => 'products.name')
       @@dir='desc'
-      
      
-     # params[:direction] =='desc'   
+     
+      params[:direction] =='desc'   
+      @d=sort_directionbyname      
      else if
       params[:sort] == 'name' && @@dir =='desc'
       @items=Item.find(:all, :include => :product, :order => 'products.name desc')
       @@dir='asc'
-      
-
-      #params[:direction] =='asc'   
+     params[:direction] =='asc'   
+     @d=sort_directionbyname
      else      	
       @items = Item.order(sort_column+" "+ sort_direction)
      end
@@ -116,5 +116,9 @@ helper_method :sort_column, :sort_direction
 
    def sort_direction
      %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+   end
+   def sort_directionbyname
+    %w[asc desc].include?(params[:direction]) ? "asc" : "desc" 
+    return params[:direction]
    end
 end

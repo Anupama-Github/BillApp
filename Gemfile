@@ -14,6 +14,7 @@ gem 'rails3-jquery-autocomplete'
 #gem 'sqlite3'
 group :development, :test do
   gem 'sqlite3'
+  gem 'redcar'
 end
 group :production do
   gem 'pg'
@@ -54,3 +55,4 @@ gem "jquery-rails"
 gem "haml", ">= 3.0.0"
 gem 'best_in_place'
 gem 'simple_form'
+

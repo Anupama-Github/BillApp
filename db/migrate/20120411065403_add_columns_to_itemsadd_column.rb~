@@ -1,0 +1,20 @@
+class AddColumnsToItemsaddColumn < ActiveRecord::Migration
+  def change
+
+
+    add_column :items, :mm
+
+    add_column :items, :size
+
+    add_column :items, :length
+
+    add_column :items, :no
+
+    add_column :items, :feet
+
+    add_column :items, :cft
+
+    add_column :items, :sqft
+
+  end
+end

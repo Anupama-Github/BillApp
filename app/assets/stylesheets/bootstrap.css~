@@ -640,7 +640,7 @@ input[type="image"] {
   box-shadow: none;
 }
 textarea {
-  height: auto;
+  height: 12px;
 }
 input[type="hidden"] {
   display: none;
@@ -1187,7 +1187,7 @@ table .span12 {
   *margin-left: 0;
 }
 .icon-white {
-  background-image: url("../img/glyphicons-halflings-white.png");
+  background-image: : url("http://www.css3.info/demos/background_veneer.png")
 }
 .icon-glass {
   background-position: 0      0;

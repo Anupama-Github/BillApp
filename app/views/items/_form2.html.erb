@@ -1,0 +1,13 @@
+<%= form.fields_for :items do |f| %>
+  <%= f.fields_for :product do |p| %>
+     <%= p.autocomplete_field :code, autocomplete_product_code_products_path, :update_elements => { :name => "#product_name", :size => "#product_size" }, :placeholder => "Type product code here", :class => "input-small" %> 
+     <%= p.text_field :name, :id => "product_name", :placeholder => "Product Name", :class => "input-small" %>
+     <%= p.text_field :size, :id => "product_size", :placeholder => "Size", :class => "input-small" %> 
+  <% end %>
+  
+  <% unless f.object.nil? || f.object.new_record? %>
+      <%= f.label :_destroy, 'Remove:', :class => "input-small" %>
+      <%= f.check_box :_destroy %>
+  <% end %>
+<% end %>
+ 

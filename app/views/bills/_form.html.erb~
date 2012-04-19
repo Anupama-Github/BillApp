@@ -1,8 +1,9 @@
-<%= form_for @bill,{:class => "form-inline"} do |f|  %>
+<% @bill.items.build %>
+<%= form_for @bill, :html => { :class => 'well form-inline'} do |f|  %>
 
   <% if @bill.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
+     <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
 
       <ul>
       <% @bill.errors.full_messages.each do |msg| %>
@@ -12,67 +13,18 @@
     </div>
   <% end %>
  
-  <div class="field">
-    <%= f.label :code %>
-    <%= f.text_field :code %>
-  </div>
-  <div class="field">
-    <%= f.label :Particulars %>
-    <%= f.text_area :Particulars %>
-  </div>
-  <div class="field">
-    <%= f.label :mm %>
-    <%= f.text_field :mm %>
-  </div>
-  <div class="field">
-    <%= f.label :size %>
-    <%= f.text_field :size %>
-  </div>
-  <div class="field">
-    <%= f.label :length %>
-    <%= f.text_field :length %>
-  </div>
-  <div class="field">
-    <%= f.label :no %>
-    <%= f.text_field :no %>
-  </div>
-  <div class="field">
-    <%= f.label :feet %>
-    <%= f.text_field :feet %>
-  </div>
-  <div class="field">
-    <%= f.label :cft %>
-    <%= f.text_field :cft %>
-  </div>
-  <div class="field">
-    <%= f.label :sqft %>
-    <%= f.text_field :sqft %>
-  </div>
-  <div class="field">
-    <%= f.label :rate %>
-    <%= f.text_field :rate %>
-  </div>
-  <div class="field">
-    <%= f.label :amt %>
-    <%= f.text_field :amt %>
-  </div>
-  <div class="field">
-    <%= f.label :vat %>
-    <%= f.text_field :vat %>
-  </div>
-  <div class="field">
-    <%= f.label :vatamt %>
-    <%= f.text_field :vatamt %>
-  </div>
-  <div class="field">
-    <%= f.label :amount %>
-    <%= f.text_field :amount %>
-  </div>
-  <div class="field">
-    <%= f.label :balance %>
-    <%= f.text_field :balance %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= render :partial => 'items/form2', :locals =>{:form => f} %> 
+  
+  <%= f.text_field :rate, :placeholder => "Rate", :class => "input-small" %>
+
+  <%= f.text_field :amt, :placeholder => "Amount", :class => "input-small" %>
+
+  <%= f.text_field :vat, :placeholder => "Vat", :class => "input-small" %>
+
+  <%= f.text_field :vatamt, :placeholder => "Vat Amount", :class => "input-small" %>
+
+  <%= f.text_field :amount, :placeholder => "Total Amount", :class => "input-small" %>
+
+  <%= f.text_field :balance, :placeholder => "Balance", :class => "input-small" %>
+
 <% end %>

@@ -1,5 +1,6 @@
 class BillsController < ApplicationController
-  autocomplete :bill, :code, :column_name => "code"
+  autocomplete :bill, :code, :extra_data => [:name]
+
  
   # GET /bills
   # GET /bills.json
@@ -17,7 +18,7 @@ class BillsController < ApplicationController
   def show
     @bill = Bill.find(params[:id])
 
-    respond_to do |format|
+    respond_to do |format|		
       format.html # show.html.erb
       format.json { render json: @bill }
     end

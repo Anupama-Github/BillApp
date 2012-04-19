@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
 helper_method :sort_column, :sort_direction, :sort_directionbyname
+autocomplete :item, :rate, :column_name => "rate"
   # GET /items
   # GET /items.json
   @@dir='asc'
@@ -15,13 +16,13 @@ helper_method :sort_column, :sort_direction, :sort_directionbyname
      
      
       params[:direction] =='desc'   
-      @d=sort_directionbyname      
+    
      else if
       params[:sort] == 'name' && @@dir =='desc'
       @items=Item.find(:all, :include => :product, :order => 'products.name desc')
       @@dir='asc'
      params[:direction] =='asc'   
-     @d=sort_directionbyname
+
      else      	
       @items = Item.order(sort_column+" "+ sort_direction)
      end

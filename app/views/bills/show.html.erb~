@@ -1,27 +1,61 @@
-<h1>/Bill</h1>
+<p id="notice"><%= notice %></p>
 
 <p>
-  <b>Item</b><br>
-  <%= @bill.item_id %>
+  <b>Code:</b>
+  <%= @bill.code %>
 </p>
 
 <p>
-  <b>Quantity</b><br>
-  <%= @bill.quantity %>
+  <b>Particulars:</b>
+  <%= @bill.Particulars %>
+</p>
+
+
+<p>
+  <b>Feet:</b>
+  <%= @bill.feet %>
 </p>
 
 <p>
-  <b>Customer</b><br>
-  <%= @bill.customer_id %>
+  <b>Cft:</b>
+  <%= @bill.cft %>
 </p>
 
 <p>
-  <b>Totalamt</b><br>
-  <%= @bill.TotalAmt %>
+  <b>Sqft:</b>
+  <%= @bill.sqft %>
 </p>
 
-<div class="form-actions">
-  <%= link_to 'Back', bills_path, :class => 'btn'  %>
-  <%= link_to 'Edit', edit_bill_path(@bill), :class => 'btn' %>
-  <%= link_to 'Delete', bill_path(@bill), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
-</div>
+<p>
+  <b>Rate:</b>
+  <%= @bill.rate %>
+</p>
+
+<p>
+  <b>Amt:</b>
+  <%= @bill.amt %>
+</p>
+
+<p>
+  <b>Vat:</b>
+  <%= @bill.vat %>
+</p>
+
+<p>
+  <b>Vatamt:</b>
+  <%= @bill.vatamt %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @bill.amount %>
+</p>
+
+<p>
+  <b>Balance:</b>
+  <%= @bill.balance %>
+</p>
+
+
+<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Back', bills_path %>

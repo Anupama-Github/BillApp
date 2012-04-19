@@ -1,14 +1,20 @@
 BillApp::Application.routes.draw do
-  resources :products
-
-  resources :items
-
+  resources :products do
+    get :autocomplete_product_code, :on => :collection
+    get :autocomplete_product_name, :on => :collection
+  end
   resources :stocks
 
   resources :customers
 
   resources :bills  do
     get :autocomplete_bill_code, :on => :collection
+    get :autocomplete_bill_rate, :on => :collection 
+  end
+
+  
+  resources :items do
+   get :autocomplete_item_rate, :on => :collection
   end
 
 

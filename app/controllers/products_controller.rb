@@ -1,4 +1,13 @@
 class ProductsController < ApplicationController
+#autocomplete :product, :code, :update_elements => {:id => '#id_element', :slogan => '#some_other_element'}
+ autocomplete :product, :code, :extra_data => [:name, :size]
+#autocomplete :product, :code
+#autocomplete :product, :name
+  # autocomplete(:product,
+              # :code,
+               #:extra_data => {'product.name' => lambda { |product, options| product.name }})
+
+
   # GET /products
   # GET /products.json
   def index

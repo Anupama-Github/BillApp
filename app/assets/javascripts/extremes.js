@@ -24,14 +24,15 @@ $.fn.extremes = function(options) {
        var length = elements.length;
        $(this).css({
          "display" : "block",
-         "position:" : "relative"
+         "position" :"relative"
+         
        });
        var maxWidth = 0;
        elements.css("float", "left");
        elements.each(function(i){
-         var width = $(this).width();
-         if (width > maxWidth) {
-           maxWidth = width;
+         var radius = $(this).width();
+         if (radius > maxWidth) {
+           maxWidth = radius;
          }
          
          var element = $(this);
@@ -46,7 +47,6 @@ $.fn.extremes = function(options) {
            "-o-transform-origin":      position,
            "-ms-transform-origin":     position,
            "transform-origin":         position,
-           "-webkit-transform":        "rotate(" + degrees + "deg)",
            "-moz-transform":           "rotate(" + degrees + "deg)",
            "-o-transform":             "rotate(" + degrees + "deg)",
            "-ms-transform":            "rotate(" + degrees + "deg)",
@@ -59,6 +59,9 @@ $.fn.extremes = function(options) {
          });
           if (degrees > 90) {
             $(this).parent().css({
+               " -webkit-border-radius":   "61px",
+               " -moz-border-radius":      "61px",
+	        "  border-radius":          "61px",
               "-webkit-transform-origin":  "50% 50%",
                "-moz-transform-origin":    "50% 50%",
                "-o-transform-origin":      "50% 50%",

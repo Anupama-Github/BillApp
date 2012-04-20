@@ -14,7 +14,7 @@ gem 'rails3-jquery-autocomplete'
 #gem 'sqlite3'
 group :development, :test do
   gem 'sqlite3'
-  gem 'redcar'
+  
 end
 group :production do
   gem 'pg'

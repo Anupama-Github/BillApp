@@ -5,7 +5,7 @@
     <th><%= sortable "name" %></th>
     <th><%= sortable "sold_qty" %></th>
     <th><%= sortable "rate" %></th>
-    <th><%= sortable "item" %></th>
+    <th><%= sortable "mm" %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,7 +13,7 @@
  </thead>
 
   <tbody>
-    <% @items.each do |item| %>
+    <% @item.each do |item| %>
      <tr>
     
        <td><%= item.product.name %></td>

@@ -1,18 +1,18 @@
 class ProductsController < ApplicationController
 #autocomplete :product, :code, :update_elements => {:id => '#id_element', :slogan => '#some_other_element'}
- autocomplete :product, :code, :extra_data => [:name, :size]
+# autocomplete :product, :name
 #autocomplete :product, :code
-#autocomplete :product, :name
-  # autocomplete(:product,
-              # :code,
-               #:extra_data => {'product.name' => lambda { |product, options| product.name }})
+autocomplete :product, :name
+  # autocomplete :product, :code,
+               #:column_name => "code",
+               #:extra_data => {:name}
 
 
   # GET /products
   # GET /products.json
   def index
     @products = Product.all
-
+    # @products = Product.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @products }

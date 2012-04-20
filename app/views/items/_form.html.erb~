@@ -1,4 +1,4 @@
-<%= form_for @item, :html => { :class => ' well form-inline' } do |f| %>
+<%= form_for @item, :html => { :class => ' well form-inline form-horizontal' } do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
@@ -61,7 +61,7 @@
 
 
 </br>
-<div class="actions">
+<div class="acions">
     <%= f.submit %>
 </div>
 

@@ -1,4 +1,4 @@
-<% @bill.items.build %>
+
 <%= form_for @bill, :html => { :class => 'well form-inline'} do |f|  %>
 
   <% if @bill.errors.any? %>
@@ -14,7 +14,7 @@
   <% end %>
  
   <%= render :partial => 'items/form2', :locals =>{:form => f} %> 
-  
+   
   <%= f.text_field :rate, :placeholder => "Rate", :class => "input-small" %>
 
   <%= f.text_field :amt, :placeholder => "Amount", :class => "input-small" %>
@@ -26,5 +26,9 @@
   <%= f.text_field :amount, :placeholder => "Total Amount", :class => "input-small" %>
 
   <%= f.text_field :balance, :placeholder => "Balance", :class => "input-small" %>
+  
+<div class="actions">
+    <%= f.submit %>
+</div>
 
 <% end %>

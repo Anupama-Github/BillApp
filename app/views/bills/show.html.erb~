@@ -1,61 +1,68 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
-
+<%= form_for @bill, :html => { :class => 'well form-inline'} do |f|  %>
 <p>
+   <b>Created on:</b>
+   <%= @bill.created_at.to_s.to(18) %>
+
   <b>Code:</b>
-  <%= @bill.code %>
-</p>
+  <%= @bill.id + 1001 %>
 
-<p>
-  <b>Particulars:</b>
-  <%= @bill.Particulars %>
-</p>
+  <b>Customer Name:</b>
+  <%= @bill.customer_name %>
 
+  </p>
 
-<p>
-  <b>Feet:</b>
-  <%= @bill.feet %>
-</p>
+<table>
+  <tr>
+    <th>Product Code</th>
+    <th>Product Name</th>
+    <th>Sold Quantity</th>
+    <th>Rate</th>
+    <th>Size</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-<p>
-  <b>Cft:</b>
-  <%= @bill.cft %>
-</p>
+<% @bill.items.each do |item| %>
+  <tr>
+    <td><%= item.product.code %></td>
+    <td><%= item.product.name %></td>
+    <td><%= item.sold_qty %></td>
+    <td><%= item.rate %></td>
+    <td><%= item.product.size %></td>
+  </tr>
+<% end %>
+</table>
 
-<p>
-  <b>Sqft:</b>
-  <%= @bill.sqft %>
-</p>
-
-<p>
-  <b>Rate:</b>
-  <%= @bill.rate %>
-</p>
 
 <p>
   <b>Amt:</b>
   <%= @bill.amt %>
-</p>
 
-<p>
   <b>Vat:</b>
   <%= @bill.vat %>
-</p>
 
-<p>
+
   <b>Vatamt:</b>
   <%= @bill.vatamt %>
-</p>
 
-<p>
+
+
   <b>Amount:</b>
   <%= @bill.amount %>
-</p>
 
-<p>
+
+  <b>Advance:</b>
+  <%= @bill.advance %>
+
+
+
   <b>Balance:</b>
-  <%= @bill.balance %>
+  <%= Integer(@bill.amount)-Integer(@bill.advance) %>
 </p>
 
-
+</div>
 <%= link_to 'Edit', edit_bill_path(@bill) %> |
 <%= link_to 'Back', bills_path %>

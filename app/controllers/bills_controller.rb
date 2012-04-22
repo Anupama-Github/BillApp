@@ -23,14 +23,23 @@ class BillsController < ApplicationController
       format.json { render json: @bill }
     end
   end
+  
+  def showold
+  @bill = Bill.find(params[:id])
+
+    respond_to do |format|		
+      format.html # showold.html.erb
+      format.json { render json: @bill }
+    end
+  end
+
 
   # GET /bills/new
   # GET /bills/new.json
   def new
     @bill = Bill.new
-     @bill.items.build 
     #@bill.items.build
-
+    3.times { @bill.items.build }
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @bill }
@@ -54,6 +63,9 @@ class BillsController < ApplicationController
       if @bill.save
         format.html { redirect_to @bill, notice: 'Bill was successfully created.' }
         format.json { render json: @bill, status: :created, location: @bill }
+        #format.html  #index.html.erb
+        #format.json { render json: @bill }
+
       else
         format.html { render action: "new" }
         format.json { render json: @bill.errors, status: :unprocessable_entity }

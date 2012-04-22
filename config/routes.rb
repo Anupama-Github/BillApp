@@ -10,6 +10,7 @@ BillApp::Application.routes.draw do
   resources :bills  do
     get :autocomplete_bill_code, :on => :collection
     get :autocomplete_bill_rate, :on => :collection 
+    
   end
 
   
@@ -17,7 +18,7 @@ BillApp::Application.routes.draw do
    get :autocomplete_item_rate, :on => :collection
   end
 
-
+ 
 
 
   get "home/index"

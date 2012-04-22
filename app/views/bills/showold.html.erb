@@ -1,17 +1,21 @@
-<div class="container">
 <p id="notice"><%= notice %></p>
-<%= form_for @bill, :html => { :class => 'well form-inline'} do |f|  %>
+
 <p>
    <b>Created on:</b>
    <%= @bill.created_at.to_s.to(18) %>
-
+</p>
+<p>
   <b>Code:</b>
   <%= @bill.id + 1001 %>
-
+</p>
+<p>
   <b>Customer Name:</b>
   <%= @bill.customer_name %>
-
-  </p>
+</p>
+<p>
+  <b>Customer Phoneno:</b>
+  <%= @bill.customer_phoneno %>
+</p>
 
 <table>
   <tr>
@@ -40,30 +44,32 @@
 <p>
   <b>Amt:</b>
   <%= @bill.amt %>
+</p>
 
+<p>
   <b>Vat:</b>
   <%= @bill.vat %>
+</p>
 
-
+<p>
   <b>Vatamt:</b>
   <%= @bill.vatamt %>
+</p>
 
-
-
+<p>
   <b>Amount:</b>
   <%= @bill.amount %>
-
-
+</p>
+<p>
   <b>Advance:</b>
   <%= @bill.advance %>
+</p>
 
-
-
+<p>
   <b>Balance:</b>
   <%= Integer(@bill.amount)-Integer(@bill.advance) %>
 </p>
 
-</div>
+
 <%= link_to 'Edit', edit_bill_path(@bill) %> |
 <%= link_to 'Back', bills_path %>
-<% end %>

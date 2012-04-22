@@ -2,7 +2,24 @@ class Bill < ActiveRecord::Base
   
   belongs_to :customer
   has_many :items
-  has_many :products, :through => :items
+
 
   accepts_nested_attributes_for :items, :allow_destroy => true
+
+def customer_name
+  customer.name if customer
+ end
+
+ def customer_name=(name)
+ self.customer= Customer.find_by_name(name) unless name.blank?
+ end
+
+def customer_name
+  customer.name if customer
+ end
+
+ def customer_name=(name)
+ self.customer= Customer.find_by_name(name) unless name.blank?
+ end
+
 end

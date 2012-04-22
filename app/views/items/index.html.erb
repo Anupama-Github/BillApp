@@ -2,6 +2,7 @@
  <thead>
   <tr>
     
+    <th><%= sortable "code" %></th>
     <th><%= sortable "name" %></th>
     <th><%= sortable "sold_qty" %></th>
     <th><%= sortable "rate" %></th>
@@ -15,8 +16,8 @@
   <tbody>
     <% @items.each do |item| %>
      <tr>
-    
-       <td><%= item.product.name %></td>
+       <td><%= item.product_code %></td> 
+       <td><%= item.product_name %></td>
        <td><%= item.sold_qty %></td>
        <td><%= item.rate %></td>
 	<td><%= item.mm %></td>

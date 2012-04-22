@@ -33,6 +33,20 @@
   <b>Sold qty:</b>
   <%= @item.sold_qty %>
 </p>
+<p>
+  <b>Feet:</b>
+  <%= @item.feet %>
+</p>
+
+<p>
+  <b>Cft:</b>
+  <%= @item.cft %>
+</p>
+
+<p>
+  <b>Sqft:</b>
+  <%= @item.sqft %>
+</p>
 
 <p>
   <b>Rate:</b>

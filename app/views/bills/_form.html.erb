@@ -1,6 +1,10 @@
+<div class="bill_code">
+  <%= generate_bill_code %>
+</div>
 
 <%= form_for @bill, :html => { :class => 'well form-inline'} do |f|  %>
 
+   
   <% if @bill.errors.any? %>
     <div id="error_explanation">
      <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
@@ -12,10 +16,11 @@
       </ul>
     </div>
   <% end %>
- 
+  
   <%= render :partial => 'items/form2', :locals =>{:form => f} %> 
    
-  <%= f.text_field :rate, :placeholder => "Rate", :class => "input-small" %>
+  
+   <%= f.text_field :customer_name, :placeholder => "Customer Name", :class => "input-small" %> 
 
   <%= f.text_field :amt, :placeholder => "Amount", :class => "input-small" %>
 
@@ -24,6 +29,8 @@
   <%= f.text_field :vatamt, :placeholder => "Vat Amount", :class => "input-small" %>
 
   <%= f.text_field :amount, :placeholder => "Total Amount", :class => "input-small" %>
+  
+  <%= f.text_field :advance, :placeholder => "Advance Amount", :class => "input-small" %>
 
   <%= f.text_field :balance, :placeholder => "Balance", :class => "input-small" %>
   

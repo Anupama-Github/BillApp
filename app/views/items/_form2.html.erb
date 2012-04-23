@@ -1,58 +1,39 @@
 
 <%= form.fields_for :items do |f| %>
   
-
+  <%= f.fields_for :product_id do |p| %>
+    <%= p.autocomplete_field :product_code, autocomplete_product_code_products_path, :placeholder => "Type code here", :update_elements => { :name => "#product_name", :size => "#product_size" }, :class => "input-small"%> 
+    <%= p.text_field :product_name, :placeholder => "Product Name", :class => "input-small", :id => "product_name"%>
+    <%= p.text_field :product_name, :placeholder => "Size", :class => "input-small", :id => "product_size"%>
+  <% end %>
  
-  <div class="field">
-  <%= f.label :product_name %>
-  <%= f.autocomplete_field :product_name ,autocomplete_product_name_products_path %> 
-  </div>
-
-   
   <% unless f.object.nil? || f.object.new_record? %>
-      <%= f.label :_destroy, 'Remove:', :class => "input-small" %>
-      <%= f.check_box :_destroy %>
+    <%= f.label :_destroy, 'Remove:', :class => "input-small" %>
+    <%= f.check_box :_destroy %>
   <% end %>
 
- 
-<div class="field">
-    <%= f.label :sold_qty %>
-   <%= f.text_field :sold_qty, :placeholder => "Sold Quantity" %> 
-</div>
+  <%= f.text_field :sold_qty, :placeholder => "Sold Quantity", :class => "input-small"  %> 
+  
+  <%= f.text_field :rate, :placeholder => "Rate", :class => "input-small"  %> 
+  
+  <%= f.text_field :length, :placeholder =>"Length", :class => "input-small"  %> 
+    
+  <%= f.text_field :no, :placeholder =>"No", :class => "input-small"  %> 
 
-<div class="field">
-    <%= f.label :rate %>
-   <%= f.text_field :rate %> 
-</div>
-<div class="field">
-    <%= f.label :mm %>
-   <%= f.text_field :mm %> 
-</div>
-<div class="field">
-    <%= f.label :size %>
-   <%= f.text_field :size %> 
-</div>
-<div class="field">
-    <%= f.label :length %>
-   <%= f.text_field :length %> 
-</div>
-<div class="field">
-    <%= f.label :no %>
-   <%= f.text_field :no %> 
-</div>
-<div class="field">
-    <%= f.label :feet %>
-   <%= f.text_field :feet %> 
-</div>
-<div class="field">
-    <%= f.label :cft %>
-   <%= f.text_field :cft %> 
-</div>
-<div class="field">
-    <%= f.label :sqft %>
-   <%= f.text_field :sqft %> 
-</div>
+  <%= f.text_field :dimensions, :placeholder =>"Magnitude ", :class => "input-small"  %> 
 
+  <select id="select01">  
+    <option>cft</option>  
+    <option>feet</option>  
+    <option>mm</option>  
+    <option>sqft</option>  
+  </select>  
+  
+  
+  
 
+    
+  
 <% end %>
+
  

@@ -1,0 +1,4 @@
+class AddDimensionsToItems < ActiveRecord::Migration
+  def change
+  end
+end

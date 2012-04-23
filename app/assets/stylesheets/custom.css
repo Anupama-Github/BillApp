@@ -70,3 +70,60 @@ select,
  display: inline-block;
  float: left;
 }
+
+.bill_date {
+  float: left;
+  font-size: 20px;
+  color: white;
+  background: brown;
+  padding: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px #E8E6E7;
+  -webkit-box-shadow: 0px 0px 2px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 2px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 0px 2px rgba(50, 50, 50, 0.75);
+}
+
+.bill_customer_name {
+  float: left;
+  margin-left: 200px;
+}
+
+.bill_customer_name input#bill_customer_name {
+  height: 20px;
+  width: 300px;
+}
+
+.bill_code {
+  float: right;
+  font-size: 20px;
+  color: white;
+  background: brown;
+  padding: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 1px 1px 1px #E8E6E7;
+  -webkit-box-shadow: 0px 0px 2px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 2px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 0px 2px rgba(50, 50, 50, 0.75); 
+}
+
+div.well.items_area {
+  margin-top: 25px;
+}
+
+form#new_bill div.bill_final_inputs input {
+  float: right;
+}
+#select01
+{
+width: 50px;
+height: 20px;
+}
+div.well.items_area div.field #bill_items_attributes_0_product_id
+{
+width: 100px;
+}

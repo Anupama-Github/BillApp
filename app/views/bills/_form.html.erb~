@@ -1,38 +1,49 @@
-<div class="bill_code">
-  <%= generate_bill_code %>
-</div>
-
 <%= form_for @bill, :html => { :class => 'well form-inline'} do |f|  %>
-
    
   <% if @bill.errors.any? %>
     <div id="error_explanation">
-     <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
-
+      <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
       <ul>
-      <% @bill.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @bill.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
+
+  <div class="bill_date">
+    <%= Date.today.strftime("%a, %d %b %Y") %>
+  </div>
+
+  <div class="bill_customer_name">
+    <%= f.text_field :customer_name, :placeholder => "Customer Name", :class => "input-small"%>
+  </div>
+
+  <div class="bill_code">
+    <%= generate_bill_code %>
+  </div>
+  </br>
+  <div class="well items_area">
+    <%= f.fields_for :items do|builder| %>
+    <%= render 'item_fields', :f => builder  %>
+    <% end %>
+  </div>
+ <%= link_to_add_fields 'Add new',f,:items %> 
+  <div class="bill_final_inputs">
+    <div class="total_amount">
+      <%= f.text_field :amount, :placeholder => "Total Amount", :class => "input-small" %>
   
-  <%= render :partial => 'items/form2', :locals =>{:form => f} %> 
-   
-  
-   <%= f.text_field :customer_name, :placeholder => "Customer Name", :class => "input-small" %> 
-
-  <%= f.text_field :amt, :placeholder => "Amount", :class => "input-small" %>
-
-  <%= f.text_field :vat, :placeholder => "Vat", :class => "input-small" %>
-
-  <%= f.text_field :vatamt, :placeholder => "Vat Amount", :class => "input-small" %>
-
-  <%= f.text_field :amount, :placeholder => "Total Amount", :class => "input-small" %>
-  
-  <%= f.text_field :amount, :placeholder => "Advance Amount", :class => "input-small" %>
-
-  <%= f.text_field :balance, :placeholder => "Balance", :class => "input-small" %>
-  
-
+      <%= f.text_field :vat, :placeholder => "Vat %", :class => "input-small" %>
+    </div>
+    </br>
+    </br>
+    <%= f.text_field :advance, :placeholder => "Advance Amount", :class => "input-small advance_input" %>
+    </br>
+    </br>
+    <%= f.text_field :balance, :placeholder => "Balance", :class => "input-small balance_input" %>
+  </div>   
+  <div class="bill_buttons">
+    <%= submit_tag "Print" %>
+    <%= submit_tag "Save" %>
+  </div>
 <% end %>

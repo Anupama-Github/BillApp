@@ -10,13 +10,13 @@ module ApplicationHelper
     end
   end
 
-  #def generate_bill_code
-   # if Bill.last.nil?
-    #  1001
-    #else
-     # Bill.last.id + 1001
-    #end
-  #end
+  def generate_bill_code
+    if Bill.last.nil?
+      1001
+    else
+      Bill.last.id + 1001
+    end
+  end
 end
 
 

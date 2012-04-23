@@ -1,7 +1,9 @@
-1335020326
+1335178709
 AddCategoryToProducts	/home/mer/rails/BillApp/db/migrate/20120418123523_add_category_to_products.rb	class AddCategoryToProducts 
 AddColumnsToItemsaddColumn	/home/mer/rails/BillApp/db/migrate/20120411065403_add_columns_to_itemsadd_column.rb	class AddColumnsToItemsaddColumn 
 AddCostToStock	/home/mer/rails/BillApp/db/migrate/20120404111840_add_cost_to_stock.rb	class AddCostToStock 
+AddCustomerToBills	/home/mer/rails/BillApp/db/migrate/20120422034700_add_customer_to_bills.rb	class AddCustomerToBills 
+AddDimensionsToItems	/home/mer/rails/BillApp/db/migrate/20120423093958_add_dimensions_to_items.rb	class AddDimensionsToItems 
 Application	/home/mer/rails/BillApp/config/application.rb	  class Application 
 ApplicationController	/home/mer/rails/BillApp/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/mer/rails/BillApp/app/helpers/application_helper.rb	module ApplicationHelper
@@ -43,6 +45,8 @@ ProductsControllerTest	/home/mer/rails/BillApp/test/functional/products_controll
 ProductsHelper	/home/mer/rails/BillApp/app/helpers/products_helper.rb	module ProductsHelper
 ProductsHelperTest	/home/mer/rails/BillApp/test/unit/helpers/products_helper_test.rb	class ProductsHelperTest 
 RemoveColumnsFromBills	/home/mer/rails/BillApp/db/migrate/20120411064213_remove_columns_from_bills.rb	class RemoveColumnsFromBills 
+RemoveColumnsFromItems	/home/mer/rails/BillApp/db/migrate/20120423092510_remove_columns_from_items.rb	class RemoveColumnsFromItems 
+RenameRateToAdvanceInBills	/home/mer/rails/BillApp/db/migrate/20120422041647_rename_rate_to_advance_in_bills.rb	class RenameRateToAdvanceInBills 
 ScrollSpy	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap.js	function ScrollSpy( element, options)
 Stock	/home/mer/rails/BillApp/app/models/stock.rb	class Stock 
 StockTest	/home/mer/rails/BillApp/test/unit/stock_test.rb	class StockTest 
@@ -64,12 +68,20 @@ change	/home/mer/rails/BillApp/db/migrate/20120404111840_add_cost_to_stock.rb	  
 change	/home/mer/rails/BillApp/db/migrate/20120411064213_remove_columns_from_bills.rb	  def change
 change	/home/mer/rails/BillApp/db/migrate/20120403143804_create_stocks.rb	  def change
 change	/home/mer/rails/BillApp/db/migrate/20120418123523_add_category_to_products.rb	  def change
+change	/home/mer/rails/BillApp/db/migrate/20120422041647_rename_rate_to_advance_in_bills.rb	  def change
+change	/home/mer/rails/BillApp/db/migrate/20120422034700_add_customer_to_bills.rb	  def change
+change	/home/mer/rails/BillApp/db/migrate/20120423093958_add_dimensions_to_items.rb	  def change
+change	/home/mer/rails/BillApp/db/migrate/20120423092510_remove_columns_from_items.rb	  def change
 clearMenus	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap.js	function clearMenus()
 create	/home/mer/rails/BillApp/app/controllers/customers_controller.rb	  def create
 create	/home/mer/rails/BillApp/app/controllers/items_controller.rb	  def create
 create	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def create
 create	/home/mer/rails/BillApp/app/controllers/bills_controller.rb	  def create
 create	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def create
+customer_name	/home/mer/rails/BillApp/app/models/bill.rb	  def customer_name
+customer_name=	/home/mer/rails/BillApp/app/models/bill.rb	  def customer_name=(name)
+customer_phoneno	/home/mer/rails/BillApp/app/models/bill.rb	  def customer_phoneno
+customer_phoneno=	/home/mer/rails/BillApp/app/models/bill.rb	  def customer_phoneno=(phoneno)
 destroy	/home/mer/rails/BillApp/app/controllers/customers_controller.rb	  def destroy
 destroy	/home/mer/rails/BillApp/app/controllers/items_controller.rb	  def destroy
 destroy	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def destroy
@@ -99,6 +111,8 @@ new	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def new
 new	/home/mer/rails/BillApp/app/controllers/bills_controller.rb	  def new
 new	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def new
 next	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap.js	function next()
+product_category	/home/mer/rails/BillApp/app/models/item.rb	 def product_category
+product_category=	/home/mer/rails/BillApp/app/models/item.rb	 def product_category=(category)
 product_code	/home/mer/rails/BillApp/app/models/item.rb	 def product_code
 product_code=	/home/mer/rails/BillApp/app/models/item.rb	 def product_code=(code)
 product_name	/home/mer/rails/BillApp/app/models/item.rb	 def product_name
@@ -111,6 +125,7 @@ show	/home/mer/rails/BillApp/app/controllers/items_controller.rb	  def show
 show	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def show
 show	/home/mer/rails/BillApp/app/controllers/bills_controller.rb	  def show
 show	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def show
+showold	/home/mer/rails/BillApp/app/controllers/bills_controller.rb	  def showold
 sort_column	/home/mer/rails/BillApp/app/controllers/items_controller.rb	   def sort_column
 sort_direction	/home/mer/rails/BillApp/app/controllers/items_controller.rb	   def sort_direction
 sort_directionbyname	/home/mer/rails/BillApp/app/controllers/items_controller.rb	   def sort_directionbyname

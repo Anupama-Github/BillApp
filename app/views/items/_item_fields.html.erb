@@ -1,5 +1,5 @@
 
-<%= form.fields_for :items do |f| %>
+
   
   <%= f.fields_for :product_id do |p| %>
     <%= p.autocomplete_field :product_code, autocomplete_product_code_products_path, :placeholder => "Type code here", :update_elements => { :name => "#product_name", :size => "#product_size" }, :class => "input-small"%> 
@@ -28,12 +28,8 @@
     <option>mm</option>  
     <option>sqft</option>  
   </select>  
+   
   
-  
-   <%= link_to_add_fields "Add new",f,:items %> 
 
-    
-  
-<% end %>
 
  

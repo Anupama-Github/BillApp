@@ -18,6 +18,14 @@ class Item < ActiveRecord::Base
  self.product= Product.find_by_name(name) unless name.blank?
  end
 
+ def product_category
+  product.category if product
+ end
+
+ def product_category=(category)
+ self.product= Product.find_by_category(category) unless name.blank?
+ end
+
 
 
 end

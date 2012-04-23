@@ -38,8 +38,8 @@ class BillsController < ApplicationController
   # GET /bills/new.json
   def new
     @bill = Bill.new
-    #@bill.items.build
-    3.times { @bill.items.build }
+    @bill.items.build
+#    3.times { @bill.items.build }
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @bill }

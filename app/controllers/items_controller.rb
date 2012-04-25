@@ -70,8 +70,9 @@ autocomplete :item, :rate, :column_name => "rate"
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to items_path, notice: 'Item was successfully created.' }
-        format.json { render json: @item, status: :created, location: @item }
+  #      format.html { redirect_to items_path, notice: 'Item was successfully created.' }
+  #      format.json { render json: @item, status: :created, location: @item }
+        format.js
       else
         format.html { render action: "new" }
         format.json { render json: @item.errors, status: :unprocessable_entity }
@@ -106,6 +107,16 @@ autocomplete :item, :rate, :column_name => "rate"
       format.json { head :no_content }
     end
   end
+  
+  def add_items
+    @item = Item.new(params[:id])
+
+    respond_to do |format|
+      if @item.save
+        format.js
+      end
+    end
+  end  
  
     private
 

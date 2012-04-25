@@ -114,6 +114,29 @@ select,
 div.well.items_area {
   margin-top: 25px;
 }
+div.bill_final_inputs div.total_amount #bill_amount{
+  margin: 4px;
+  margin-top: 0px;
+  
+}
+
+div.bill_final_inputs #bill_advance{
+  margin-top: 3px;
+  margin-right: -105px;
+  
+}
+
+
+div.bill_final_inputs #bill_balance{
+  margin-top: 6px;
+  margin-right: 4px;
+  
+}
+
+div.well.items_area div.items_input_fields {
+  
+  margin: 3px;
+}
 
 form#new_bill div.bill_final_inputs input {
   float: right;
@@ -121,7 +144,7 @@ form#new_bill div.bill_final_inputs input {
 #select01
 {
 width: 50px;
-height: 34px;
+height: 20px;
 }
 div.well.items_area div.field #bill_items_attributes_0_product_id
 {

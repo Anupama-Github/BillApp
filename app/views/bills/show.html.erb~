@@ -27,11 +27,11 @@
 
 <% @bill.items.each do |item| %>
   <tr>
-    <td><%= item.product.code %></td>
-    <td><%= item.product.name %></td>
+    <td><%= item.product_code %></td>
+    <td><%= item.product_name %></td>
     <td><%= item.sold_qty %></td>
     <td><%= item.rate %></td>
-    <td><%= item.product.size %></td>
+    <td><%= item.product_size %></td>
   </tr>
 <% end %>
 </table>

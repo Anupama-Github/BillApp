@@ -16,7 +16,7 @@
   </div>
 
   <div class="bill_customer_name">
-    <%= f.text_field :customer_name, :placeholder => "Customer Name", :class => "input-small"%>
+    <%= f.text_field :customer_name, :placeholder => "Customer Name", :class => "input-small" %>
   </div>
 
   <div class="bill_code">
@@ -24,11 +24,12 @@
   </div>
   </br>
   <div class="well items_area">
-    <%= f.fields_for :items do|builder| %>
-    <%= render 'item_fields', :f => builder  %>
-    <% end %>
+    <%= f.fields_for :items do |fi| %>
+     <%= render 'item_fields', :f => fi %>
+     <% end %>
+     
   </div>
- <%= link_to_add_fields 'Add new',f,:items %> 
+    <%= link_to_add_fields 'Add new',f,:items %>   
   <div class="bill_final_inputs">
     <div class="total_amount">
       <%= f.text_field :amount, :placeholder => "Total Amount", :class => "input-small" %>

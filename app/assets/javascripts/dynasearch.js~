@@ -8,6 +8,7 @@ $(document).ready(function() {
    $.get($("#items_search").attr("action"), $("#items_search").serialize(),null, "script");
    return false;
    });
+ 
 });
 
 
@@ -21,9 +22,4 @@ $('#bill_balance').keypress(function(event){
 
 });
 
-function add_fields(link, association, content) {
-        var new_id = new Date().getTime();
-        var regexp = new RegExp("new_" + association, "g");
-        $(link).parent().before(content.replace(regexp, new_id));
-}
 

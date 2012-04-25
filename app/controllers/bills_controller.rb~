@@ -56,7 +56,7 @@ class BillsController < ApplicationController
   def create
     @bill = Bill.new(params[:bill])
      #@bill = Bill.new(params[:id])
-   # @bill.items.build
+    @bill.items.build
     #3.times { @bill.items.build }
      #@bill.items.build
      respond_to do |format|

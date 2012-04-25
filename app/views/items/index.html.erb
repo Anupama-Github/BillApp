@@ -6,7 +6,7 @@
     <th><%= sortable "name" %></th>
     <th><%= sortable "sold_qty" %></th>
     <th><%= sortable "rate" %></th>
-    <th><%= sortable "mm" %></th>
+  
     <th></th>
     <th></th>
     <th></th>
@@ -16,11 +16,11 @@
   <tbody>
     <% @items.each do |item| %>
      <tr>
-       <td><%= item.product_code %></td> 
-       <td><%= item.product_name %></td>
+       <td><%= item.product.code %></td> 
+       <td><%= item.product.name %></td>
        <td><%= item.sold_qty %></td>
        <td><%= item.rate %></td>
-	<td><%= item.mm %></td>
+	     <td><%= item.product.category %></td>
        <td><%= link_to 'Show', item %></td>
        <td><%= link_to 'Edit', edit_item_path(item) %></td>
        <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>

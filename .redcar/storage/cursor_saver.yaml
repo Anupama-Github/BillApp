@@ -1,11 +1,5 @@
 --- 
 cursor_positions: 
-  - :path: app/views/bills/_form.html.erb
-    :cursor_offset: 57
-    :timestamp: 2012-04-21 16:46:45 +05:30
-  - :path: app/views/layouts/application.html.erb
-    :cursor_offset: 1006
-    :timestamp: 2012-04-21 17:03:31 +05:30
   - :path: app/views/home/index.html.erb
     :cursor_offset: 2494
     :timestamp: 2012-04-23 11:54:25 +05:30
@@ -15,16 +9,67 @@ cursor_positions:
   - :path: app/controllers/bills_controller.rb
     :cursor_offset: 753
     :timestamp: 2012-04-23 12:49:38 +05:30
-  - :path: app/controllers/items_controller.rb
-    :cursor_offset: 0
-    :timestamp: 2012-04-12 15:40:10 +05:30
-  - :path: app/helpers/application_helper.rb
-    :cursor_offset: 0
-    :timestamp: 2012-04-21 22:46:47 +05:30
-  - :path: app/views/bills/new.html.erb
-    :cursor_offset: 20
-    :timestamp: 2012-04-18 17:26:31 +05:30
   - :path: app/helpers/products_helper.rb
     :cursor_offset: 0
     :timestamp: 2012-04-03 17:29:40 +05:30
+  - :path: config/routes.rb
+    :cursor_offset: 506
+    :timestamp: 2012-04-24 12:44:46 +05:30
+  - :path: app/models/customer.rb
+    :cursor_offset: 0
+    :timestamp: 2012-04-04 20:34:11 +05:30
+  - :path: app/controllers/items_controller.rb
+    :cursor_offset: 211
+    :timestamp: 2012-04-24 12:51:58 +05:30
+  - :path: app/views/products/_form.html.erb
+    :cursor_offset: 707
+    :timestamp: 2012-04-24 16:14:08 +05:30
+  - :path: app/views/items/index.html.erb
+    :cursor_offset: 350
+    :timestamp: 2012-04-24 16:13:21 +05:30
+  - :path: app/assets/javascripts/items.js
+    :cursor_offset: 275
+    :timestamp: 2012-04-24 13:06:58 +05:30
+  - :path: app/assets/javascripts/extremes.js
+    :cursor_offset: 0
+    :timestamp: 2012-04-11 11:23:56 +05:30
+  - :path: app/assets/javascripts/dynasearch.js
+    :cursor_offset: 280
+    :timestamp: 2012-04-24 16:29:30 +05:30
+  - :path: app/controllers/products_controller.rb
+    :cursor_offset: 260
+    :timestamp: 2012-04-24 16:00:53 +05:30
+  - :path: app/views/bills/show.html.erb
+    :cursor_offset: 23
+    :timestamp: 2012-04-24 15:31:07 +05:30
+  - :path: app/helpers/application_helper.rb
+    :cursor_offset: 0
+    :timestamp: 2012-04-23 16:49:02 +05:30
+  - :path: app/views/bills/new.html.erb
+    :cursor_offset: 20
+    :timestamp: 2012-04-18 17:26:31 +05:30
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-04-23 11:58:43 +05:30
+  - :path: app/models/item.rb
+    :cursor_offset: 102
+    :timestamp: 2012-04-24 15:28:02 +05:30
+  - :path: db/schema.rb
+    :cursor_offset: 1959
+    :timestamp: 2012-04-23 15:11:26 +05:30
+  - :path: app/assets/javascripts/application.js
+    :cursor_offset: 0
+    :timestamp: 2012-03-27 12:03:15 +05:30
+  - :path: app/views/bills/_form.html.erb
+    :cursor_offset: 790
+    :timestamp: 2012-04-24 15:34:14 +05:30
+  - :path: app/views/bills/_item_fields.html.erb
+    :cursor_offset: 1218
+    :timestamp: 2012-04-24 16:30:23 +05:30
+  - :path: app/assets/javascripts/autocomplete-rails.js
+    :cursor_offset: 0
+    :timestamp: 2012-04-17 13:07:20 +05:30
+  - :path: app/assets/javascripts/bills.js
+    :cursor_offset: 41
+    :timestamp: 2012-04-24 16:32:02 +05:30
 files_to_retain: 0

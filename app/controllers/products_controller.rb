@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 #autocomplete :product, :code, :update_elements => {:name => '#id_element', :slogan => '#some_other_element'}
 # autocomplete :product, :name
-autocomplete :product, :code, :extra_data => [:name, :size] 
+autocomplete :product, :code, :extra_data => [:name, :size, :category] 
 #autocomplete :product, :name
   # autocomplete :product, :code,
                #:column_name => "code",

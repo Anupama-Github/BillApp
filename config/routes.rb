@@ -18,7 +18,7 @@ BillApp::Application.routes.draw do
    get :autocomplete_item_rate, :on => :collection
   end
 
- 
+  match "items/add_items" => "items#add_items", :via => :post
 
 
   get "home/index"

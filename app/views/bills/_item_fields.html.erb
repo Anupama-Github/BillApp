@@ -1,34 +1,28 @@
 
+  <div class="items_input_fields">
+    <%= f.autocomplete_field :product_code, autocomplete_product_code_products_path, :placeholder => "Type code here", :update_elements => { :name => "#product_name", :size => "#product_size", :category => "#product_metric" }, :class => "input-small"%> 
+  <%= text_field_tag :product_name,nil, :placeholder => "Product Name", :class => "input-small", :id => "product_name" %>
+  <%= text_field_tag :product_size, nil, :placeholder => "Size", :class => "input-small", :id => "product_size" %>
   
-  <%= f.fields_for :product_id do |p| %>
-    <%= p.autocomplete_field :product_code, autocomplete_product_code_products_path, :placeholder => "Type code here", :update_elements => { :name => "#product_name", :size => "#product_size" }, :class => "input-small"%> 
-    <%= p.text_field :product_name, :placeholder => "Product Name", :class => "input-small", :id => "product_name"%>
-    <%= p.text_field :product_name, :placeholder => "Size", :class => "input-small", :id => "product_size"%>
-  <% end %>
  
-  <% unless f.object.nil? || f.object.new_record? %>
-    <%= f.label :_destroy, 'Remove:', :class => "input-small" %>
-    <%= f.check_box :_destroy %>
-  <% end %>
-
-  <%= f.text_field :sold_qty, :placeholder => "Sold Quantity", :class => "input-small"  %> 
-  
-  <%= f.text_field :rate, :placeholder => "Rate", :class => "input-small"  %> 
-  
-  <%= f.text_field :length, :placeholder =>"Length", :class => "input-small"  %> 
+   
+    <% unless f.object.nil? || f.object.new_record? %>
+      <%= f.label :_destroy, 'Remove:', :class => "input-small" %>
+      <%= f.check_box :_destroy %>
+    <% end %>
     
-  <%= f.text_field :no, :placeholder =>"No", :class => "input-small"  %> 
-
-  <%= f.text_field :dimensions, :placeholder =>"Magnitude ", :class => "input-small"  %> 
-
-
-  <select id="select01">  
-    <option>cft</option>  
-    <option>feet</option>  
-    <option>mm</option>  
-    <option>sqft</option>  
-  </select>  
-
-
+    <%= f.text_field :sold_qty, :placeholder => "Sold Quantity", :class => "input-small"  %> 
+    
+    <%= f.text_field :rate, :placeholder => "Rate", :class => "input-small"  %> 
+    
+    <%= f.text_field :length, :placeholder =>"Length", :class => "input-small"  %> 
+      
+    <%= f.text_field :no, :placeholder =>"No", :class => "input-small"  %> 
+    
+    <%= f.text_field :dimensions, :placeholder =>"Magnitude ", :class => "input-small"  %> 
   
- 
+    <%= hidden_field_tag :metric, nil, :class => "input-small", :id => "product_metric"%>
+
+    <span id="metric"></span>
+  </div>
+

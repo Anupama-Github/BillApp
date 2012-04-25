@@ -1,6 +1,6 @@
 --- 
 open_files: 
-  - app/helpers/application_helper.rb
-  - app/views/bills/new.html.erb
   - app/views/bills/_form.html.erb
-  - app/views/layouts/application.html.erb
+  - app/views/bills/_item_fields.html.erb
+  - app/assets/javascripts/autocomplete-rails.js
+  - app/assets/javascripts/bills.js

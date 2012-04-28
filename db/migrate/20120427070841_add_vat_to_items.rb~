@@ -1,0 +1,4 @@
+class AddVatToItems < ActiveRecord::Migration
+  def change
+  end
+end

@@ -55,14 +55,14 @@ class BillsController < ApplicationController
   # POST /bills.json
   def create
     @bill = Bill.new(params[:bill])
-     #@bill = Bill.new(params[:id])
-    @bill.items.build
+   #@bill = Bill.new(params[:id])
+   # @bill.items.build
     #3.times { @bill.items.build }
      #@bill.items.build
      respond_to do |format|
       if @bill.save
-        format.html { redirect_to @bill, notice: 'Bill was successfully created.' }
-        format.json { render json: @bill, status: :created, location: @bill }
+        format.html { redirect_to new_bill_path, notice: 'Bill was successfully created.' }
+        format.json { render json: '/bills/new', status: :created, location: @bill }
         #format.html  #index.html.erb
         #format.json { render json: @bill }
 

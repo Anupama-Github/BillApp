@@ -1,0 +1,32 @@
+<table class="table table-striped">
+  <tr>
+    
+    <th>Code</th>
+    <th>Customer Name</th>
+    <th>Items</th>
+    <th>Vat</th>
+    <th>Vatamt</th>
+    <th>Amount</th>
+    <th>Advance</th>
+    <th>Balance</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bills.each do |bill| %>
+  <tr>
+    <td><%= bill.code %></td>
+    <td><%= bill.customer_name %></td>
+    <td><% bill.items.each do |f| %><%= f.product_name %>-<%= f.product_size %><br /><% end %></td>
+    <td><%= bill.vat %></td>
+    <td><%= bill.vatamt %></td>
+    <td><%= bill.amount %></td>
+    <td><%= bill.advance %></td>
+    <td><%= bill.balance %></td>
+    <td><%= link_to 'Show', bill %></td>
+    <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
+    <td><%= link_to 'Destroy', bill, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>

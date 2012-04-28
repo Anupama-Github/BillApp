@@ -5,11 +5,11 @@ class BillsController < ApplicationController
   # GET /bills
   # GET /bills.json
   def index
-    @bills = Bill.all
+    @bills = Bill.order("created_at DESC").search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @bills }
+      format.js
     end
   end
 
@@ -26,7 +26,7 @@ class BillsController < ApplicationController
   
   def showold
   @bill = Bill.find(params[:id])
-
+    
     respond_to do |format|		
       format.html # showold.html.erb
       format.json { render json: @bill }
@@ -55,14 +55,16 @@ class BillsController < ApplicationController
   # POST /bills.json
   def create
     @bill = Bill.new(params[:bill])
-     #@bill = Bill.new(params[:id])
+   #@bill = Bill.new(params[:id])
    # @bill.items.build
     #3.times { @bill.items.build }
      #@bill.items.build
-     respond_to do |format|
+     @bill.date = Time.now 
+
+    respond_to do |format|
       if @bill.save
-        format.html { redirect_to @bill, notice: 'Bill was successfully created.' }
-        format.json { render json: @bill, status: :created, location: @bill }
+        format.html { redirect_to new_bill_path, notice: 'Bill was successfully created.' }
+        #format.json { render json: '/bills/new', status: :created, location: @bill }
         #format.html  #index.html.erb
         #format.json { render json: @bill }
 

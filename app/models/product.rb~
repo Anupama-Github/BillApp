@@ -1,0 +1,15 @@
+class Product < ActiveRecord::Base
+
+has_many :items
+has_many :stocks
+
+ def self.search(search)
+  if search
+    find(:all, :conditions => ['name LIKE ?', ["%#{search}%"]*1].flatten)
+  else
+    find(:all)
+  end
+ end 
+
+
+end

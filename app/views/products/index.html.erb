@@ -1,27 +1,11 @@
-<h1>Listing products</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Size</th>
-    <th>Code</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= form_tag products_path, :method => 'get', :id => "products_search_form", :class => "search_box" do %>
+        
+    <%= text_field_tag :search, params[:search], :placeholder => "Royal search", :id => "products_search_box", :class => "search_field" %><%= link_to 'New Product', new_product_path, :class => "btn btn-primary pull-right" %>
 
-<% @products.each do |product| %>
-  <tr>
-    <td><%= product.name %></td>
-    <td><%= product.size %></td>
-    <td><%= product.code %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+    <% end %>
+<div id="products_result"><%= render 'products' %></div>
 
 <br />
 
-<%= link_to 'New Product', new_product_path %>
+

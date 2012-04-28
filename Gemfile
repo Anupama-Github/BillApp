@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-group :production do
+group :production, :development do
   gem 'unicorn'
 end
 
@@ -42,7 +42,7 @@ gem "tabletastic"
 # gem 'jbuilder'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+ gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'

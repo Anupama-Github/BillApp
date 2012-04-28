@@ -1,41 +1,11 @@
-<h1>Listing bills</h1>
-<%= form_for bills_path do |f| %>
-  <%= f.autocomplete_field :code, autocomplete_bill_code_bills_path %>
-<% end %>
-<table>
-  <tr>
-    <th>Code</th>
-    <th>Particulars</th>
-    <th>Items</th>
-    <th>Amt</th>
-    <th>Vat</th>
-    <th>Vatamt</th>
-    <th>Amount</th>
-    <th>Advance</th>
-    <th>Balance</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @bills.each do |bill| %>
-  <tr>
-    <td><%= bill.code %></td>
-    <td><%= bill.Particulars %></td>
-    <td><%= bill.items %></td>
-    <td><%= bill.amt %></td>
-    <td><%= bill.vat %></td>
-    <td><%= bill.vatamt %></td>
-    <td><%= bill.amount %></td>
-    <td><%= bill.advance %></td>
-    <td><%= bill.balance %></td>
-    <td><%= link_to 'Show', bill %></td>
-    <td><%= link_to 'Edit', edit_bill_path(bill) %></td>
-    <td><%= link_to 'Destroy', bill, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
 
+<%= form_tag bills_path, :method => 'get', :id => "bills_search_form", :class => "search_box" do %>
+        
+ <%= text_field_tag :search, params[:search], :placeholder => "Royal Search", :id => "bills_search_box", :class => "search_field" %><%= link_to 'New Bill', new_bill_path , :class => "btn btn-primary pull-right" %>
+ <% end %>
 <br />
+<div id="bills_result"><%= render 'bills' %></div>
 
-<%= link_to 'New Bill', new_bill_path %>
+
+

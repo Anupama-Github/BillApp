@@ -11,11 +11,10 @@ autocomplete :product, :code, :extra_data => [:name, :size, :category]
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
-    # @products = Product.find(:all, :conditions => ['name LIKE ?', "%#{params[:search]}%"])
+    @products = Product.order("created_at DESC").search(params[:search])
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @products }
+      format.js
     end
   end
 
@@ -52,7 +51,7 @@ autocomplete :product, :code, :extra_data => [:name, :size, :category]
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to new_product_path, notice: 'Product was successfully created.' }
         format.json { render json: @product, status: :created, location: @product }
       else
         format.html { render action: "new" }

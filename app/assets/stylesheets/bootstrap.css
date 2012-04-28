@@ -2544,6 +2544,7 @@ button.btn.small, input[type="submit"].btn.small {
 }
 .navbar .brand:hover {
   text-decoration: none;
+  
 }
 .navbar .brand {
   float: left;
@@ -3535,4 +3536,8 @@ display: inline;
 float: left;
 
 }
-
+.btn a:hover {
+text-decoration: none;
+background-color: #E6E6E6;
+color:black;
+}

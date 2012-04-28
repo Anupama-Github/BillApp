@@ -3,7 +3,7 @@
   
   <%= f.fields_for :products do |p| %>
     <%= p.autocomplete_field :product_code, autocomplete_product_code_products_path, :placeholder => "Type code here", :update_elements => { :name => "#product_name", :size => "#product_size" }, :class => "input-small"%> 
-    <%= p.text_field :product_name, :placeholder => "Product Name", :class => "input-small", :id => "product_name"%>
+    <%= p.text_field :product_name, :placeholder => "Product Name", :class => "input-small", :readonly=>"true", :id => "product_name" %>
     <%= p.text_field :product_name, :placeholder => "Size", :class => "input-small", :id => "product_size"%>
   <% end %>
  
@@ -37,3 +37,21 @@
 <% end %>
 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,105 +8,106 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>BillApp Home</title>
+<title>Royal</title>
 <style type="text/css">
-  body {
+body {
     background-image: url("http://www.css3.info/demos/background_veneer.png");
     font: 12px/120% Georgia, Times, serif;
   }
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  a, a:link, a:visited {
-    text-decoration: none;
-    color: #666;
-    padding: 0 5px;
-  }
-  a:hover {
-    color: #000;
-  }
-  ul {
-    list-style-type: none;
-    display: none;
-    font-size: 11px;
-    margin: 0 auto;
-  }
-  ul.colors li {
-    padding: 20px;
-    font: bold 12px/130% Arial, sans-serif;
-    text-transform: uppercase;
-    color: #fff;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    text-shadow: rgba(0,0,0,0.4) 1px 1px 2px;
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    -ms-transition: all 0.2s ease;
-  }
-  
-  ul.colors li:hover {
-    -webkit-transform: scale(1.2);
-    cursor: pointer;
-  }
-  
-  .red {background-color: #FF0000;}
-  .brick {background-color: #FF3300;}
-  .orange {background-color: #FF8000;}
-  .yellow {background-color: #FFDD00;}
-  .lime {background-color: #ABFF00;}
-  .green {background-color: #45FF00;}
-  .bondi {background-color: #00FF79;}
-  .aqua {background-color: #00FFE0;}
-  .blue {background-color: #0055FF;}
-  .navy {background-color: #1800FF;}
-  .purple {background-color: #7800FF;}
-  .violet {background-color: #C000FF;}
-  .pink {background-color: #FF00E6;}
-  
-  
-  .ec-circle{
-    width: 42px;
-    height: 42px;
-    -webkit-border-radius: 21px;
-    -moz-border-radius: 21px;
-    border-radius: 50%;
-    text-align: center;
-    overflow: hidden;
-    font-family:'Kelly Slab', Georgia, serif;
-    background: #dda994 url(../images/1.jpg) no-repeat center center;
-    box-shadow:
-        inset 0 0 1px 230px rgba(0,0,0,0.6),
-        inset 0 0 0 7px #d5ad94;
-    transition: box-shadow 400ms ease-in-out;
-    display: block;
-    outline: none;
-  }
-  
+* {
+margin: 0;
+padding: 0;
+}
+       a, a:link, a:visited {
+text-decoration: none;
+color: red;
+padding: 0 5px;
 
-  </style>
+}
+a, a:link, a:visited #item{
+text-decoration: none;
+color: black;
+padding: 0 5px;
+}
+a:hover {
+color: #000;
+}
+ul {
+list-style-type: none;
+display: none;
+font-size: 11px;
+margin: 0 auto;
+}
+
+footer {
+display: block;
+font-size: 12px;
+}
+
+ul.colors li {
+padding: 20px;
+font: bold 12px/130% Arial, sans-serif;
+-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+-moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+box-shadow: 0 0 5px rgba(0,0,0,0.3);
+text-transform: uppercase;
+color: #fff;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+text-shadow: rgba(0,0,0,0.4) 1px 1px 2px;
+-webkit-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+-o-transition: all 0.2s ease;
+-ms-transition: all 0.2s ease;
+}
+
+ul.colors li:hover {
+-webkit-transform: scale(1.2);
+cursor: pointer;
+}
+
+.red {background-color: #FF0000; }
+.brick {background-color: #FF3300;}
+.orange {background-color: #FF8000;}
+.yellow {background-color: #FFDD00;}
+.lime {background-color: #ABFF00;}
+.green {background-color: #45FF00;}
+.bondi {background-color: #00FF79;}
+.aqua {background-color: #00FFE0;}
+.blue {background-color: #0055FF;}
+.navy {background-color: #1800FF;}
+.purple {background-color: #7800FF;}
+.violet {background-color: #C000FF;}
+.pink {background-color: #FF00E6;}
+
+ #item, #cust, #stock
+{
+color:gray;
+text-shadow:none;
+}
+
+    </style>
 </head>
 
-  <body>
+<body>
 
-  <div class="container">
+<div class="container">
   
     <div id="main">
       <ul class="colors">
-        <li class="red"><%= link_to "Items", items_path, :class => "ec-circle" %>
+        <li class="red"><a id="item" href="#">Items</a></li>
         <!--<li class="brick">Brick</li>  -->
-        <li class="orange"><a href="http://localhost:3000/bills/new" class="ec-circle">Bills</a></li>
+        <li class="bondi"><%= link_to 'Bills', new_bill_path %></li>
         <!--<li class="yellow">Yellow</li> -->
         <!--<li class="lime">Lime</li> -->
-        <li class="green"><a href="http://localhost:3000/customers" class="ec-circle">Customers</a></li>
+        <li class="green"><a id="cust" href="#" class="ec-circle">Customers</a></li>
         <!--<li class="bondi">Bondi</li> -->
         <!--<li class="aqua">Aqua</li> -->
-        <li class="blue"><a href="http://localhost:3000/products" class="ec-circle">Products</a></li>
+        <li class="blue"><%= link_to 'Products', new_product_path %></li>
         <!--<li class="navy">Navy</li> -->
         <!--<li class="purple">Purple</li> -->
-        <li class="violet"><a href="http://localhost:3000/stocks" class="ec-circle">Stocks</a></li>
+        <li class="violet"><a id="stock" href="#" class="ec-circle">Stocks</a></li>
         <!--<li class="pink">Pink</li> -->
       </ul>
     
@@ -115,25 +116,23 @@
   </div> <!-- end of #container -->
   
   
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="lib/js/libs/jquery-1.4.2.min.js"%3E%3C/script%3E'))</script>
-  
-  
-  <!-- scripts concatenated and minified via ant build script-->
-  <script src="../src/extremes.js"></script>
-  <!-- end concatenated and minified scripts-->
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('.simple').extremes();
-      $('.colors').extremes({
-          diameter: 100
-      });
-    })
-  </script> 
-  
-  </body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="lib/js/libs/jquery-1.4.2.min.js"%3E%3C/script%3E'))</script>
+
+
+<!-- scripts concatenated and minified via ant build script-->
+<script src="../src/extremes.js"></script>
+<!-- end concatenated and minified scripts-->
+
+<script type="text/javascript">
+$(document).ready(function(){
+$('.simple').extremes();
+$('.colors').extremes({
+diameter: 50
+});
+})
+</script>
+
+</body>
 </html>
-
-
-

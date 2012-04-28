@@ -1,13 +1,8 @@
 $(document).ready(function() {
-  $("#items th a").live("click", function() {
-   $.getScript(this.href);
+  $("#products_search_box").keyup(function() {
+    $.get($("#products_search_form").attr("action"), $("#products_search_form").serialize(), null, "script");
     return false;
   });
-
-  $("#search").keyup(function() {
-   $.get($("#items_search").attr("action"), $("#items_search").serialize(),null, "script");
-   return false;
-   });
  
 });
 
@@ -30,5 +25,9 @@ $('#textbox').live('keydown', function(e) {
     // call custom function here
   } 
 });
+
+
+
+
 
 

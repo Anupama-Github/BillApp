@@ -16,11 +16,12 @@
   </div>
 
   <div class="bill_customer_name">
-    <%= f.text_field :customer_name, :placeholder => "Customer Name", :class => "input-small" %>
+    <%= f.text_field :customer_name, :placeholder => "Customer Name", :class => "input-small dontprint" %>
   </div>
 
   <div class="bill_code">
     <%= generate_bill_code %>
+    <%= f.hidden_field :code, :value => generate_bill_code %>
   </div>
   </br>
   <div class="well items_area">
@@ -29,10 +30,10 @@
      <% end %>
      
   </div>
-    <%= link_to_add_fields 'Add new',f,:items %>   
+  <div class="btn dontprint"><%= link_to_add_fields 'Add new',f,:items %>   </div>
   <div class="bill_final_inputs">
     <div class="total_amount">
-      <%= f.text_field :amount, :placeholder => "Total Amount", :class => "input-small" %>
+      <%= f.integer_field :amount, :placeholder => "Total Amount", :class => "input-small" %>
   
       <%= f.text_field :vat, :placeholder => "Vat %", :class => "input-small" %>
     </div>
@@ -44,7 +45,7 @@
     <%= f.text_field :balance, :placeholder => "Balance", :class => "input-small balance_input" %>
   </div>   
   <div class="bill_buttons">
-    <%= submit_tag "Print" %>
-    <%= submit_tag "Save" %>
+    <%= submit_tag "Print", :class => "btn dontprint", :onClick => "window.print()" %>
+    <%= submit_tag "Save", :class => "btn-primary dontprint" %>
   </div>
 <% end %>

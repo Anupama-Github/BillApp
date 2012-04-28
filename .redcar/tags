@@ -1,9 +1,10 @@
-1335265929
+1335518094
 AddCategoryToProducts	/home/mer/rails/BillApp/db/migrate/20120418123523_add_category_to_products.rb	class AddCategoryToProducts 
 AddColumnsToItemsaddColumn	/home/mer/rails/BillApp/db/migrate/20120411065403_add_columns_to_itemsadd_column.rb	class AddColumnsToItemsaddColumn 
 AddCostToStock	/home/mer/rails/BillApp/db/migrate/20120404111840_add_cost_to_stock.rb	class AddCostToStock 
 AddCustomerToBills	/home/mer/rails/BillApp/db/migrate/20120422034700_add_customer_to_bills.rb	class AddCustomerToBills 
 AddDimensionsToItems	/home/mer/rails/BillApp/db/migrate/20120423093958_add_dimensions_to_items.rb	class AddDimensionsToItems 
+AddVatToItems	/home/mer/rails/BillApp/db/migrate/20120427070841_add_vat_to_items.rb	class AddVatToItems 
 Application	/home/mer/rails/BillApp/config/application.rb	  class Application 
 ApplicationController	/home/mer/rails/BillApp/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/mer/rails/BillApp/app/helpers/application_helper.rb	module ApplicationHelper
@@ -58,12 +59,12 @@ TestCase	/home/mer/rails/BillApp/test/test_helper.rb	class ActiveSupport::TestCa
 User	/home/mer/rails/BillApp/app/models/user.rb	class User 
 UserTest	/home/mer/rails/BillApp/test/unit/user_test.rb	class UserTest 
 add_fields	/home/mer/rails/BillApp/app/assets/javascripts/items.js	function add_fields(link, association, content)
+add_hour_and_min	/home/mer/rails/BillApp/app/helpers/application_helper.rb	  def add_hour_and_min
 add_items	/home/mer/rails/BillApp/app/controllers/items_controller.rb	  def add_items
 backdrop	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap.js	function backdrop( callback )
 change	/home/mer/rails/BillApp/db/migrate/20120404043447_create_bills.rb	  def change
 change	/home/mer/rails/BillApp/db/migrate/20120316192947_devise_create_users.rb	  def change
 change	/home/mer/rails/BillApp/db/migrate/20120403120819_create_customers.rb	  def change
-change	/home/mer/rails/BillApp/db/migrate/20120404111417_create_items.rb	  def change
 change	/home/mer/rails/BillApp/db/migrate/20120411065403_add_columns_to_itemsadd_column.rb	  def change
 change	/home/mer/rails/BillApp/db/migrate/20120403115939_create_products.rb	  def change
 change	/home/mer/rails/BillApp/db/migrate/20120404111840_add_cost_to_stock.rb	  def change
@@ -74,6 +75,8 @@ change	/home/mer/rails/BillApp/db/migrate/20120422041647_rename_rate_to_advance_
 change	/home/mer/rails/BillApp/db/migrate/20120422034700_add_customer_to_bills.rb	  def change
 change	/home/mer/rails/BillApp/db/migrate/20120423093958_add_dimensions_to_items.rb	  def change
 change	/home/mer/rails/BillApp/db/migrate/20120423092510_remove_columns_from_items.rb	  def change
+change	/home/mer/rails/BillApp/db/migrate/20120427070841_add_vat_to_items.rb	  def change
+change	/home/mer/rails/BillApp/db/migrate/20120404111417_create_items.rb	  def change
 clearMenus	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap.js	function clearMenus()
 create	/home/mer/rails/BillApp/app/controllers/customers_controller.rb	  def create
 create	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def create
@@ -119,10 +122,14 @@ product_category=	/home/mer/rails/BillApp/app/models/item.rb	 def product_catego
 product_code	/home/mer/rails/BillApp/app/models/item.rb	 def product_code
 product_code=	/home/mer/rails/BillApp/app/models/item.rb	 def product_code=(code)
 product_name	/home/mer/rails/BillApp/app/models/item.rb	  def product_name
+product_name=	/home/mer/rails/BillApp/app/models/item.rb	  def product_name=(name)
 product_size	/home/mer/rails/BillApp/app/models/item.rb	 def product_size
+product_size=	/home/mer/rails/BillApp/app/models/item.rb	  def product_size=(size)
 removeBackdrop	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap.js	function removeBackdrop()
 removeElement	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap.js	function removeElement()
 removeWithAnimation	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap.js	function removeWithAnimation()
+search	/home/mer/rails/BillApp/app/models/product.rb	 def self.search(search)
+search	/home/mer/rails/BillApp/app/models/bill.rb	  def self.search(search)
 show	/home/mer/rails/BillApp/app/controllers/customers_controller.rb	  def show
 show	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def show
 show	/home/mer/rails/BillApp/app/controllers/items_controller.rb	  def show

@@ -9,4 +9,8 @@ function add_fields(link, association, content) {
          // $("div.well.items_area").before(content.replace(regexp, new_id));
         
 }
+$(document).ready(function() {
+  $('input.item_product_name').setAttribute("readonly", "true");
 
+
+});

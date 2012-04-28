@@ -4,3 +4,4 @@ open_files:
   - app/views/bills/_item_fields.html.erb
   - app/assets/javascripts/autocomplete-rails.js
   - app/assets/javascripts/bills.js
+  - db/schema.rb

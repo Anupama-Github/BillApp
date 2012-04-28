@@ -1,0 +1,7 @@
+@media only print {
+
+  .dontprint {
+    display: none;
+  }
+
+}

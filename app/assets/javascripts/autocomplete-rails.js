@@ -107,7 +107,25 @@
     }
   });
 
+
   jQuery(document).ready(function(){
     jQuery('input[data-autocomplete]').railsAutocomplete();
   });
 })(jQuery);
+$(document).ready(function() {
+ 
+$("#products_search_box").keyup(function() {
+    $.get($("#products_search_form").attr("action"), $("#products_search_form").serialize(), null, "script");
+    return false;
+  });
+ 
+$("#bills_search_box").keyup(function() {
+    $.get($("#bills_search_form").attr("action"), $("#bills_search_form").serialize(), null, "script");
+    return false;
+  });
+  
+ 
+});
+
+
+$('.dropdown-toggle').dropdown()

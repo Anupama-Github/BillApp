@@ -59,7 +59,7 @@ class BillsController < ApplicationController
    # @bill.items.build
     #3.times { @bill.items.build }
      #@bill.items.build
-     @bill.date = Time.now 
+     @bill.created_at = Time.now 
 
     respond_to do |format|
       if @bill.save

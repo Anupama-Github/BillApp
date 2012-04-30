@@ -8,25 +8,18 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title>Royal</title>
+<title>Extremes Simple Example</title>
 <style type="text/css">
 body {
-    background-image: url("http://www.css3.info/demos/background_veneer.png");
-    font: 12px/120% Georgia, Times, serif;
-  }
+font: 12px/120% Georgia, Times, serif;
+}
 * {
 margin: 0;
 padding: 0;
 }
        a, a:link, a:visited {
 text-decoration: none;
-color: red;
-padding: 0 5px;
-text-shadow:black;
-}
-a, a:link, a:visited #item{
-text-decoration: none;
-color: black;
+color: #666;
 padding: 0 5px;
 }
 a:hover {
@@ -67,7 +60,7 @@ ul.colors li:hover {
 cursor: pointer;
 }
 
-.red {background-color: #FF0000; }
+.red {background-color: #FF0000;}
 .brick {background-color: #FF3300;}
 .orange {background-color: #FF8000;}
 .yellow {background-color: #FFDD00;}
@@ -81,58 +74,55 @@ cursor: pointer;
 .violet {background-color: #C000FF;}
 .pink {background-color: #FF00E6;}
 
- #item, #cust, #stock
-{
-color:gray;
-text-shadow:none;
-}
 
     </style>
+<%= javascript_include_tag "extremes.js" %>
+<%= javascript_include_tag "jquery.min.js" %>
+
 </head>
 
 <body>
 
-<div class="container">
-  
-    <div id="main">
-      <ul class="colors">
-        <li class="red"><a id="item" href="#">Items</a></li>
-        <!--<li class="brick">Brick</li>  -->
-        <li class="bondi"><%= link_to 'Bills', new_bill_path %></li>
-        <!--<li class="yellow">Yellow</li> -->
-        <!--<li class="lime">Lime</li> -->
-        <li class="green"><a id="cust" href="#" class="ec-circle">Customers</a></li>
-        <!--<li class="bondi">Bondi</li> -->
-        <!--<li class="aqua">Aqua</li> -->
-        <li class="blue"><%= link_to 'Products', new_product_path %></li>
-        <!--<li class="navy">Navy</li> -->
-        <!--<li class="purple">Purple</li> -->
-        <li class="violet"><a id="stock" href="#" class="ec-circle">Stocks</a></li>
-        <!--<li class="pink">Pink</li> -->
-      </ul>
-    
-    </div>
-  
-  </div> <!-- end of #container -->
-  
-  
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
-<script>!window.jQuery && document.write(unescape('%3Cscript src="lib/js/libs/jquery-1.4.2.min.js"%3E%3C/script%3E'))</script>
 
 
-<!-- scripts concatenated and minified via ant build script-->
-<script src="../src/extremes.js"></script>
-<!-- end concatenated and minified scripts-->
+<div id="main">
+<ul class="colors">
+<li class="red">Red</li>
+<li class="brick">Brick</li>
+<li class="orange">Orange</li>
+<li class="yellow">Yellow</li>
+<li class="lime">Lime</li>
+<li class="green">Green</li>
+<li class="bondi">Bondi</li>
+<li class="aqua">Aqua</li>
+<li class="blue">Blue</li>
+<li class="navy">Navy</li>
+<li class="purple">Purple</li>
+<li class="violet">Violet</li>
+<li class="pink">Pink</li>
+</ul>
 
+</div>
+
+ <!-- end of #container -->
 <script type="text/javascript">
 $(document).ready(function(){
-$('.simple').extremes();
+
 $('.colors').extremes({
 diameter: 50
 });
 })
 </script>
 
+
+
+
+<!-- scripts concatenated and minified via ant build script
+<scipt src="/assets/javascripts/extremes.js" />-->
+<!-- end concatenated and minified scripts-->
+
+
 </body>
 </html>
+
+

@@ -174,3 +174,11 @@ font-size: 15px;
 color: white;
 }
 
+.table tbody{
+  border-left:1px solid ;
+  border-left-color:#FEEEF0;
+  border-right:1px solid #FEEEFD;
+  -moz-box-shadow: 0 0 5px #888;
+  -webkit-box-shadow: 0 0 5px#888;
+   box-shadow: 0 0 5px #888;
+}

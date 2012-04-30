@@ -18,6 +18,7 @@
     </style>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= stylesheet_link_tag "form.css" %>
+    <%= stylesheet_link_tag "print", :media => "print" %>
   
     <%= stylesheet_link_tag "custom" %>
      
@@ -27,9 +28,9 @@
     <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
     <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
 
-   <%= javascript_include_tag "http://twitter.github.com/bootstrap/1.4.0/bootstrap-buttons.js"       %>
-   <%= javascript_include_tag "http://twitter.github.com/bootstrap/1.4.0/bootstrap-twipsy.js" %>
-   <%= javascript_include_tag "http://twitter.github.com/bootstrap/1.4.0/bootstrap-popover.js" %>
+   <%= javascript_include_tag "bootstrap-buttons.js" %>
+   <%= javascript_include_tag "bootstrap-twipsy.js" %>
+   <%= javascript_include_tag "bootstrap-popover.js" %>
    <%= javascript_include_tag "autocomplete-rails.js" %>
 
    <%= csrf_meta_tags %>
@@ -64,7 +65,7 @@
 
             <li ><%= link_to "Bills", bills_path, :id=>"bill" %>
 	    </li>
-            <li><%= link_to "Products", products_path %>
+            <li><%= link_to "Products", products_path, :id=>"product" %>
 	    </li>
           </ul>
          </div>

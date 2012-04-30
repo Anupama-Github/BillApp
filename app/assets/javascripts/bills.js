@@ -1,9 +1,27 @@
+$.fn.sumValues = function() {
+	alert("keypress");
+	var sum = 0; 
+	this.each(function() {
+		if ( $(this).is(':input') ) {
+                  	alert($(this).val());
+			var val = $(this).val();
+		} else {
+			var val = $(this).text();
+		}
+		sum += parseFloat( ('0' + val).replace(/[^0-9-\.]/g, ''), 10 );
+	});
+	return sum;
+};
+
 $(document).ready(function() {
   $("input#product_name").change(function() {
 //    alert($(this).val());
     alert("testing");
 //    $("span#metric").text()
   });  
+  $('.colors').extremes({
+diameter: 50
+});
 
   $('div.items_input_fields input').live('change', function() {
 //	alert("keypress");
@@ -49,8 +67,11 @@ $(document).ready(function() {
   });
 
   $('input#bill_vat').live('keyup', function() {
+            
       $('input#bill_amount').val($('input.item_amount').sumValues());
+      alert("hi");
       var $bill_amount = parseInt($('input#bill_amount').val(), 10);
+      alert($bill_amount);
       var $bill_vat = parseInt($('input#bill_vat').val(), 10);
       var $vat_amount = parseInt($bill_amount * $bill_vat / 100, 10);
 //      alert($vat_amount);
@@ -65,18 +86,6 @@ $(document).ready(function() {
   });
 });
 
-$.fn.sumValues = function() {
-	var sum = 0; 
-	this.each(function() {
-		if ( $(this).is(':input') ) {
-			var val = $(this).val();
-		} else {
-			var val = $(this).text();
-		}
-		sum += parseFloat( ('0' + val).replace(/[^0-9-\.]/g, ''), 10 );
-	});
-	return sum;
-};
 
 	
        

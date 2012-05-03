@@ -1,4 +1,5 @@
 class BillsController < ApplicationController
+  before_filter :authenticate_bill!
   autocomplete :bill, :code, :extra_data => [:name, :size]
 
  
@@ -59,7 +60,7 @@ class BillsController < ApplicationController
    # @bill.items.build
     #3.times { @bill.items.build }
      #@bill.items.build
-     @bill.created_date = Time.now 
+     @bill.created_at = Time.now 
 
     respond_to do |format|
       if @bill.save

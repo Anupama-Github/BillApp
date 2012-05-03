@@ -6,3 +6,7 @@ BillApp::Application.initialize!
 
 Date::DATE_FORMATS.merge!(:default => "%d/%m/%Y") 
   
+ActionView::Base.field_error_proc = Proc.new do|html_tag,instance_tag|
+ html_tag
+
+end

@@ -55,4 +55,6 @@ gem "jquery-rails"
 gem "haml", ">= 3.0.0"
 gem 'best_in_place'
 gem 'simple_form'
+gem 'jquery-datatables-rails',:git => 'git://github.com/rweng/jquery-datatables-rails'
+gem 'kaminari'
 

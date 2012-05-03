@@ -12,7 +12,8 @@
     <%= f.check_box :_destroy %>
   <% end %>
 
-  <%= f.text_field :sold_qty, :placeholder => "Sold Quantity", :class => "input-small"  %> 
+   <fieldset>
+  <%= f.text_field :sold_qty, :placeholder => "Sold Quantity", :class => "input-small" %> 
   
   <%= f.text_field :rate, :placeholder => "Rate", :class => "input-small"  %> 
   
@@ -22,13 +23,7 @@
 
   <%= f.text_field :dimensions, :placeholder =>"Magnitude ", :class => "input-small"  %> 
 
-  <select id="select01">  
-    <option>cft</option>  
-    <option>feet</option>  
-    <option>mm</option>  
-    <option>sqft</option>  
-  </select>  
-  
+  </fieldset>
   
   
 

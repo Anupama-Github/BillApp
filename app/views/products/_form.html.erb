@@ -24,9 +24,10 @@
     <%= f.text_field :code %>
   </div>
   <div class="field">
-    <%= f.label :category %><br />
-    <%= f.number_field :category %>
-  </div>
+   <%= f.label :Unit %></br>
+   <%= f.select :category, options_for_select([["cft", "0"], ["feet","1"],["mm","2"],["sqft","3"]]), { :selected => "mm" }, { :class => "input-small", :id => "select_category" } %>
+   </div> 
+  </br></br>  </br></br>
   <div class="actions">
     <%= f.submit 'create', :class => "btn primary" %>
 <%= link_to 'Back', products_path, :class => "btn info" %>

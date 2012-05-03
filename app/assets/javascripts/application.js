@@ -9,17 +9,23 @@
 //
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
-//
+
+
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require autocomplete-rails
-//= require twitter/bootstrap
-//= require jquery.purr
-//= require best_in_place
-//= require dynasearch
-//= require extremes
-//= require_tree .
+//=require autocomplete-rails
+//=require best_in_place
+//=require bills
+//=require dynasearch
+//=require extremes
+//=require home
+//=require items
+//=require jquery.purr
+//=require twitter/bootstrap
+//= require dataTables/jquery.dataTables
+//= require dataTables/jquery.dataTables.bootstrap
+//=require_tree .
 
 
    

@@ -1,0 +1,11 @@
+<%= paginate @products %>
+<%= form_tag products_path, :method => 'get', :id => "products_search_form", :class => "search_box" do %>
+        
+    <%= text_field_tag :search, params[:search], :placeholder => "Royal search", :id => "products_search_box", :class => "search_field" %><%= link_to 'New Product', new_product_path, :class => "btn btn-primary pull-right" %>
+
+    <% end %>
+<div id="products_result"><%= render 'products' %></div>
+
+<br />
+
+

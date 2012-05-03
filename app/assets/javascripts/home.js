@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
-$('.colors').extremes({
-diameter: 50
-});
+// $('.colors').extremes({
+// diameter: 50
+// });
 
 });

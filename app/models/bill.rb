@@ -2,8 +2,11 @@ class Bill < ActiveRecord::Base
   
   belongs_to :customer
   has_many :items
-
+  validates :items, :presence =>true
+  validates :code,:presence => true
   validates :code, :uniqueness => true
+  
+
   accepts_nested_attributes_for :items, :allow_destroy => true
 
   def self.search(search)

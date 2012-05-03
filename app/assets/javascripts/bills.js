@@ -19,9 +19,9 @@ $(document).ready(function() {
     alert("testing");
 //    $("span#metric").text()
   });  
-  $('.colors').extremes({
-diameter: 50
-});
+//   $('.colors').extremes({
+// diameter: 50
+// });
 
   $('div.items_input_fields input').live('change', function() {
 //	alert("keypress");
@@ -84,6 +84,10 @@ diameter: 50
       }
 
   });
+});
+$('.datatable').dataTable({
+  "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
+  "sPaginationType": "bootstrap"
 });
 
 

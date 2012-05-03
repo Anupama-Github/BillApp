@@ -17,10 +17,9 @@
       }
     </style>
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= stylesheet_link_tag "form.css" %>
-    <%= stylesheet_link_tag "print", :media => "print" %>
+    
   
-    <%= stylesheet_link_tag "custom" %>
+    
      
     <!-- Le fav and touch icons -->
     <link href="images/favicon.ico" rel="shortcut icon">
@@ -28,15 +27,13 @@
     <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
     <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
 
-   <%= javascript_include_tag "bootstrap-buttons.js" %>
-   <%= javascript_include_tag "bootstrap-twipsy.js" %>
-   <%= javascript_include_tag "bootstrap-popover.js" %>
-   <%= javascript_include_tag "autocomplete-rails.js" %>
-
+   <%= javascript_include_tag "application" %>
+   
    <%= csrf_meta_tags %>
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js">
-
+  <!--
+   <script>
+   
    $(function () {
        $("a[rel*=popover]")
        .popover({
@@ -47,7 +44,7 @@
        })
     });
    </script> 
-
+-->
  </head>
 
   <body>
@@ -63,10 +60,20 @@
         <div class="nav-collapse">
           <ul class="nav">
 
-            <li ><%= link_to "Bills", bills_path, :id=>"bill" %>
+            <li ><%= link_to "Bills", bills_path, :class=>"bill" %>
 	    </li>
-            <li><%= link_to "Products", products_path, :id=>"product" %>
+            <li><%= link_to "Products", products_path, :class=>"bill" %>
 	    </li>
+           <!-- <li><%= link_to "Log out",new_user_session_path, :class=>"bill" %>
+           </li>-->
+             <% if user_signed_in? %>
+             <li>
+              <%= link_to'Logout', destroy_user_session_path,, :method => :delete, :class=>"bill",:id => "logout" %>        
+             </li>
+              
+             <% end %>
+            
+
           </ul>
          </div>
         </div>
@@ -78,6 +85,6 @@
       </div>
     </div> 
     
-<%= javascript_include_tag "application" %>
+
   </body>
 </html>

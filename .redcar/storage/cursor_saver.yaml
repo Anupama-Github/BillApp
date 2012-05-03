@@ -1,8 +1,5 @@
 --- 
 cursor_positions: 
-  - :path: app/views/home/index.html.erb
-    :cursor_offset: 2494
-    :timestamp: 2012-04-23 11:54:25 +05:30
   - :path: app/models/bill.rb
     :cursor_offset: 422
     :timestamp: 2012-04-23 12:13:51 +05:30
@@ -51,15 +48,6 @@ cursor_positions:
   - :path: app/models/item.rb
     :cursor_offset: 102
     :timestamp: 2012-04-24 15:28:02 +05:30
-  - :path: app/assets/javascripts/application.js
-    :cursor_offset: 0
-    :timestamp: 2012-03-27 12:03:15 +05:30
-  - :path: app/assets/javascripts/bills.js
-    :cursor_offset: 1312
-    :timestamp: 2012-04-27 14:05:30 +05:30
-  - :path: app/views/bills/_form.html.erb
-    :cursor_offset: 0
-    :timestamp: 2012-04-27 11:18:25 +05:30
   - :path: db/schema.rb
     :cursor_offset: 0
     :timestamp: 2012-04-27 12:41:51 +05:30
@@ -69,10 +57,34 @@ cursor_positions:
   - :path: app/views/bills/_item_fields.html.erb
     :cursor_offset: 0
     :timestamp: 2012-04-27 16:57:19 +05:30
+  - :path: app/views/home/index.html.erb
+    :cursor_offset: 1822
+    :timestamp: 2012-04-30 15:26:22 +05:30
+  - :path: app/assets/javascripts/application.js
+    :cursor_offset: 0
+    :timestamp: 2012-05-02 10:07:43 +05:30
+  - :path: app/assets/javascripts/bills.js
+    :cursor_offset: 0
+    :timestamp: 2012-05-02 10:05:02 +05:30
+  - :path: app/views/bills/_form.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-04-27 17:29:22 +05:30
+  - :path: db/seeds.rb
+    :cursor_offset: 342
+    :timestamp: 2012-03-17 00:54:00 +05:30
+  - :path: app/assets/javascripts/home.js
+    :cursor_offset: 73
+    :timestamp: 2012-04-30 15:28:01 +05:30
   - :path: app/views/layouts/application.html.erb
-    :cursor_offset: 15
-    :timestamp: 2012-04-30 15:15:36 +05:30
+    :cursor_offset: 0
+    :timestamp: 2012-05-02 13:03:28 +05:30
+  - :path: app/views/bills/_bills.html.erb
+    :cursor_offset: 224
+    :timestamp: 2012-04-30 16:12:28 +05:30
+  - :path: app/assets/stylesheets/custom.css
+    :cursor_offset: 0
+    :timestamp: 2012-05-02 13:04:30 +05:30
   - :path: app/assets/stylesheets/application.css
     :cursor_offset: 0
-    :timestamp: 2012-04-27 17:18:32 +05:30
+    :timestamp: 2012-05-02 10:07:53 +05:30
 files_to_retain: 0

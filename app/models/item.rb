@@ -1,7 +1,9 @@
 class Item < ActiveRecord::Base
   belongs_to :bill
   belongs_to :product
-
+  validates :sold_qty, :presence =>true
+  validates :rate, :presence =>true
+  validates :size, :presence =>true
 
  def product_code
   product.code if product

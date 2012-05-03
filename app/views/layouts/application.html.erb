@@ -17,10 +17,9 @@
       }
     </style>
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= stylesheet_link_tag "form.css" %>
-    <%= stylesheet_link_tag "print", :media => "print" %>
+    
   
-    <%= stylesheet_link_tag "custom" %>
+    
      
     <!-- Le fav and touch icons -->
     <link href="images/favicon.ico" rel="shortcut icon">
@@ -29,6 +28,7 @@
     <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
 
    <%= javascript_include_tag "application" %>
+   
    <%= csrf_meta_tags %>
 
   <!--
@@ -60,10 +60,20 @@
         <div class="nav-collapse">
           <ul class="nav">
 
-            <li ><%= link_to "Bills", bills_path, :id=>"bill" %>
+            <li ><%= link_to "Bills", bills_path, :class=>"bill" %>
 	    </li>
-            <li><%= link_to "Products", products_path, :id=>"bill" %>
+            <li><%= link_to "Products", products_path, :class=>"bill" %>
 	    </li>
+           <!-- <li><%= link_to "Log out",new_user_session_path, :class=>"bill" %>
+           </li>-->
+             <% if user_signed_in? %>
+             <li>
+              <%= link_to'Logout', destroy_user_session_path, :method => :delete, :class=>"bill",:id => "logout" %>        
+             </li>
+              
+             <% end %>
+            
+
           </ul>
          </div>
         </div>

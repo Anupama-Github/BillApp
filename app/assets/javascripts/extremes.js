@@ -1,35 +1,40 @@
-$.fn.extremes = function(options) {
+$.fn.extremes = function(options) {var x=0;
     var defaults = {
         diameter: false,
         background: false
     };
+     
     var options = jQuery.extend(defaults, options);
-    return this.each(function() {
+   // return this.each(function() {
+
       var diagram = $(this);
+      
       // Apply a rotation to offset awkward initial states
       // 'this' is the selector
        diagram.css({
          position: "relative"
        });
-       if (defaults.rotate) {
-         diagram.css({
-           '-webkit-transform': "rotate(" + options.rotate + "deg)",
-           '-moz-transform': "rotate(" + options.rotate + "deg)",
-           '-ms-transform': "rotate(" + options.rotate + "deg)",
-           '-o-transform': "rotate(" + options.rotate + "deg)",
-           'transform': "rotate(" + options.rotate + "deg)",
-           });
-       }
+       //if (defaults.rotate) {
+         //diagram.css({
+           //'-webkit-transform': "rotate(" + options.rotate + "deg)",
+           //'-moz-transform': "rotate(" + options.rotate + "deg)",
+           //'-ms-transform': "rotate(" + options.rotate + "deg)",
+           //'-o-transform': "rotate(" + options.rotate + "deg)",
+           //'transform': "rotate(" + options.rotate + "deg)",
+           //});
+       //}
        var elements = $(this).children();
        var length = elements.length;
+       
        $(this).css({
          "display" : "block",
-         "position" :"relative"
-         
+         "position:" : "relative"
        });
        var maxWidth = 0;
        elements.css("float", "left");
-       elements.each(function(i){
+      var w=0;
+      elements.each(function(){
+         
          var radius = $(this).width();
          if (radius > maxWidth) {
            maxWidth = radius;
@@ -37,7 +42,11 @@ $.fn.extremes = function(options) {
          
          var element = $(this);
          var height = $(this).height();
-         var degrees =  i/length * 360 - 90;
+         var degrees =  -90+w*72;
+         w++;
+        // alert(w);
+         
+         
          var position = "0 50%";
          var indent = (defaults.diameter) ? "0 0 0 " + defaults.diameter + "px" : "0 0 0 " + height * (length ) + "px";
          element.wrap("<div class='extremes-div'><div class='extremes-inner' /></div>");
@@ -82,9 +91,10 @@ $.fn.extremes = function(options) {
        });
        if (diagram.height() < 50) {
          diagram.css({
-           "width" : maxWidth * 2 + defaults.diameter || 100,
-           "height" : maxWidth * 2 + defaults.diameter || 100
+           "width" : maxWidth * 2 + defaults.diameter || 50,
+           "height" : maxWidth * 2 + defaults.diameter || 50
          });
+         
        }
-  });
+ // });
 };

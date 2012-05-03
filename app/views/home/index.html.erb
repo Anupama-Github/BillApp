@@ -1,95 +1,128 @@
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>BillApp Home</title>
 <style type="text/css">
-body {
-font: 12px/120% Georgia, Times, serif;
-}
-* {
-margin: 0;
-padding: 0;
-}
-       a, a:link, a:visited {
-text-decoration: none;
-color: #666;
-padding: 0 5px;
-}
-a:hover {
-color: #000;
-}
-ul {
-list-style-type: none;
-//display: none;
-font-size: 11px;
-margin: 0 auto;
-}
+  body {
+    background-image: url("http://www.css3.info/demos/background_veneer.png");
+    font: 12px/120% Georgia, Times, serif;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  a, a:link, a:visited {
+    text-decoration: none;
+    color: #666;
+    padding: 0 5px;
+  }
+  a:hover {
+    color: #000;
+  }
+  ul {
+    list-style-type: none;
+    display: none;
+    font-size: 11px;
+    margin: 0 auto;
+  }
+  ul.colors li {
+    padding: 20px;
+    font: bold 12px/130% Arial, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-shadow: rgba(0,0,0,0.4) 1px 1px 2px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+  }
+  
+  ul.colors li:hover {
+    -webkit-transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .red {background-color: #FF0000;}
+  .brick {background-color: #FF3300;}
+  .orange {background-color: #FF8000;}
+  .yellow {background-color: #FFDD00;}
+  .lime {background-color: #ABFF00;}
+  .green {background-color: #45FF00;}
+  .bondi {background-color: #00FF79;}
+  .aqua {background-color: #00FFE0;}
+  .blue {background-color: #0055FF;}
+  .navy {background-color: #1800FF;}
+  .purple {background-color: #7800FF;}
+  .violet {background-color: #C000FF;}
+  .pink {background-color: #FF00E6;}
+  
+  
+  .ec-circle{
+    width: 52px;
+    height: 52px;
+    -webkit-border-radius: 21px;
+    -moz-border-radius: 21px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    font-family:'Kelly Slab', Georgia, serif;
+    background: #dda994 url(../images/1.jpg) no-repeat center center;
+    box-shadow:
+        inset 0 0 1px 230px rgba(0,0,0,0.6),
+        inset 0 0 0 7px #d5ad94;
+    transition: box-shadow 400ms ease-in-out;
+    display: block;
+    outline: none;
+  }
+  
 
-footer {
-display: block;
-font-size: 12px;
-}
+  </style>
+</head>
 
-ul.colors li {
-padding: 20px;
-font: bold 12px/130% Arial, sans-serif;
--webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
--moz-box-shadow: 0 0 5px rgba(0,0,0,0.3);
-box-shadow: 0 0 5px rgba(0,0,0,0.3);
-text-transform: uppercase;
-color: #fff;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-border-radius: 10px;
-text-shadow: rgba(0,0,0,0.4) 1px 1px 2px;
--webkit-transition: all 0.2s ease;
--moz-transition: all 0.2s ease;
--o-transition: all 0.2s ease;
--ms-transition: all 0.2s ease;
-}
+  <body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script>!window.jQuery && document.write(unescape('%3Cscript src="lib/js/libs/jquery-1.4.2.min.js"%3E%3C/script%3E'))</script>
+  
+ <%= javascript_include_tag "extremes" %>
 
-ul.colors li:hover {
--webkit-transform: scale(1.2);
-cursor: pointer;
-}
+  
+  
+      <ul class="colors">
+<li class="navy"><%= link_to 'Bill', new_bill_path %></li>
+<li class="brick"><%= link_to 'Items', new_item_path %></li>
+<li class="green"><%= link_to 'Stock', new_stock_path %></li>
+<li class="orange"><%= link_to 'Product', new_product_path %></li>
+<li class="violet"><%= link_to 'Customer', new_customer_path %></li>
 
-.red {background-color: #FF0000;}
-.brick {background-color: #FF3300;}
-.orange {background-color: #FF8000;}
-.yellow {background-color: #FFDD00;}
-.lime {background-color: #ABFF00;}
-.green {background-color: #45FF00;}
-.bondi {background-color: #00FF79;}
-.aqua {background-color: #00FFE0;}
-.blue {background-color: #0055FF;}
-.navy {background-color: #1800FF;}
-.purple {background-color: #7800FF;}
-.violet {background-color: #C000FF;}
-.pink {background-color: #FF00E6;}
-
-
-    </style>
-
-<div id="main">
-<ul class="colors">
-<li class="red">Red</li>
-<li class="brick">Brick</li>
-<li class="orange">Orange</li>
-<li class="yellow">Yellow</li>
-<li class="lime">Lime</li>
-<li class="green">Green</li>
-<li class="bondi">Bondi</li>
-<li class="aqua">Aqua</li>
-<li class="blue">Blue</li>
-<li class="navy">Navy</li>
-<li class="purple">Purple</li>
-<li class="violet">Violet</li>
-<li class="pink">Pink</li>
 </ul>
 
-</div>
 
- <!-- end of #container -->
+<!-- end of #container -->
+  
+  
+  <!-- end concatenated and minified scripts-->
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+      
+      $('.colors').extremes({
+          diameter: 100
+      });
+    })
+  </script> 
+  
+  </body>
+</html>
 
 
-
-<!-- scripts concatenated and minified via ant build script
-<scipt src="/assets/javascripts/extremes.js" />-->
-<!-- end concatenated and minified scripts-->
 

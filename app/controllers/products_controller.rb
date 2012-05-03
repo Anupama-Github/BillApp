@@ -11,7 +11,9 @@ autocomplete :product, :code, :extra_data => [:name, :size, :category]
   # GET /products
   # GET /products.json
   def index
-    @products = Product.order("created_at DESC").search(params[:search])
+    
+    #@products = Product.order("created_at DESC").page(params[:page]).search(params[:search])
+     @products = Kaminari.paginate_array(Product.order("created_at DESC").search(params[:search])).page(params[:page]).per(5)
     respond_to do |format|
       format.html # index.html.erb
       format.js

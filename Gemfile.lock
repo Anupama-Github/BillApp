@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/rweng/jquery-datatables-rails
+  revision: dfe4d39c10b485828809cc75443232fbb16c3149
+  specs:
+    jquery-datatables-rails (1.9.1.3)
+      jquery-rails
+
+GIT
   remote: git://github.com/sferik/rails_admin.git
   revision: 24599526c946be33986be626878f4a9b6160f83e
   specs:
@@ -180,7 +187,9 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   haml (>= 3.0.0)
+  jquery-datatables-rails!
   jquery-rails
+  kaminari
   pg
   rails (= 3.2.1)
   rails3-jquery-autocomplete

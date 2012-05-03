@@ -165,12 +165,39 @@ width: 100%;
 #bills_search_form a:visited, #products_search_form a:visited {
 color: white;
 }
-#bill
+.bill
 {
-font-size: 20px;
+font-size: 15px;
 }
 
  #company a:link, #company a:visited{
 color: white;
 }
 
+.table tbody{
+  border-left:1px solid ;
+  border-left-color:#FEEEF0;
+  border-right:1px solid #FEEEFD;
+  -moz-box-shadow: 0 0 5px #888;
+  -webkit-box-shadow: 0 0 5px#888;
+   box-shadow: 0 0 5px #888;
+}
+.pagination{
+  float:right;
+}
+#select_category {
+    height: 35px;
+    width: 60px;
+    padding: 7px;
+}
+
+#error_explanation{
+float:right;
+
+
+}
+
+#logout{
+float:right;
+margin-right: 0px;
+}

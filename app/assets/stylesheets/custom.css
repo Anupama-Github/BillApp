@@ -165,7 +165,7 @@ width: 100%;
 #bills_search_form a:visited, #products_search_form a:visited {
 color: white;
 }
-#bill
+.bill
 {
 font-size: 15px;
 }
@@ -181,4 +181,23 @@ color: white;
   -moz-box-shadow: 0 0 5px #888;
   -webkit-box-shadow: 0 0 5px#888;
    box-shadow: 0 0 5px #888;
+}
+.pagination{
+  float:right;
+}
+#select_category {
+    height: 35px;
+    width: 60px;
+    padding: 7px;
+}
+
+#error_explanation{
+float:right;
+
+
+}
+
+#logout{
+
+margin-left: 800px;
 }

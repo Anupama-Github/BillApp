@@ -1,7 +1,12 @@
 --- 
 open_files: 
   - app/views/bills/_form.html.erb
-  - app/views/bills/_item_fields.html.erb
-  - app/assets/javascripts/autocomplete-rails.js
   - app/assets/javascripts/bills.js
-  - db/schema.rb
+  - db/seeds.rb
+  - app/assets/javascripts/application.js
+  - app/views/home/index.html.erb
+  - app/assets/javascripts/home.js
+  - app/views/layouts/application.html.erb
+  - app/views/bills/_bills.html.erb
+  - app/assets/stylesheets/custom.css
+  - app/assets/stylesheets/application.css

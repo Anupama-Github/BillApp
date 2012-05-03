@@ -1,16 +1,6 @@
 <%= form_for @bill, :html => { :class => 'well form-inline'} do |f|  %>
    
-  <% if @bill.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
-      <ul>
-        <% @bill.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  
   <div class="bill_date">
     <%= Date.today.strftime("%a, %d %b %Y") %>
   </div>
@@ -33,7 +23,7 @@
   <div class="btn dontprint"><%= link_to_add_fields 'Add new',f,:items %>   </div>
   <div class="bill_final_inputs">
     <div class="total_amount">
-      <%= f.integer_field :amount, :placeholder => "Total Amount", :class => "input-small" %>
+      <%= f.text_field :amount, :placeholder => "Total Amount", :class => "input-small" %>
   
       <%= f.text_field :vat, :placeholder => "Vat %", :class => "input-small" %>
     </div>
@@ -48,4 +38,21 @@
     <%= submit_tag "Print", :class => "btn dontprint", :onClick => "window.print()" %>
     <%= submit_tag "Save", :class => "btn-primary dontprint" %>
   </div>
+</br></br>
+  <% if @bill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bill.errors.count, "error") %> prohibited this bill from being saved:</h2>
+      <ul>
+        <% @bill.errors.full_messages.each do |msg| %>
+          <li ><%= msg %></li>
+        <% end %>
+      </ul>>
+    </div>
+  <% end %>
+
+
 <% end %>
+
+
+
+

@@ -11,7 +11,7 @@
   .well{
    border:0px;
    box-shadow:0 0px 0px;
-   }
+   };
 
   a:link, a:visited {background: white; color:white; text-decoration:none;}
 

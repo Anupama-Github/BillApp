@@ -33,5 +33,6 @@ class Bill < ActiveRecord::Base
   def customer_phoneno=(phoneno)
     self.customer= Customer.find_or_create_by_phoneno(phoneno) unless name.blank?
   end
+ 
 
 end

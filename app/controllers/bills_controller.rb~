@@ -1,12 +1,12 @@
 class BillsController < ApplicationController
-  before_filter :authenticate_bill!
+  before_filter :authenticate_user!
   autocomplete :bill, :code, :extra_data => [:name, :size]
 
  
   # GET /bills
   # GET /bills.json
   def index
-    @bills = Bill.order("created_at DESC").search(params[:search])
+    @bills = Kaminari.paginate_array(Bill.order("created_at DESC").search(params[:search])).page(params[:page]).per(8)
 
     respond_to do |format|
       format.html # index.html.erb

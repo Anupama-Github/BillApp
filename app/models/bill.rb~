@@ -2,7 +2,7 @@ class Bill < ActiveRecord::Base
   
   belongs_to :customer
   has_many :items
-  validates :items.sold_qty, :presence =>true
+  validates :items, :presence =>true
   validates :code,:presence => true
   validates :code, :uniqueness => true
   
@@ -33,5 +33,15 @@ class Bill < ActiveRecord::Base
   def customer_phoneno=(phoneno)
     self.customer= Customer.find_or_create_by_phoneno(phoneno) unless name.blank?
   end
+ def bill_vat
+  bill.vat if bill
+  else
+  self.vat=0;
+ end
+
+ def bill_vat=(vat)
+ self.vat= Bill.find_or_create_by_vat(vat)
+ end
+ 
 
 end

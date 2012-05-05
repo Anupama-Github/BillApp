@@ -6,7 +6,7 @@ class BillsController < ApplicationController
   # GET /bills
   # GET /bills.json
   def index
-    @bills = Bill.order("created_at DESC").search(params[:search])
+    @bills = Kaminari.paginate_array(Bill.order("created_at DESC").search(params[:search])).page(params[:page]).per(6)
 
     respond_to do |format|
       format.html # index.html.erb

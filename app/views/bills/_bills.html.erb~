@@ -30,4 +30,4 @@
   </tr>
 <% end %>
 </table>
-<%= paginate @bills %>
+<%= paginate @products %>

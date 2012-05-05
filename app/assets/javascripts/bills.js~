@@ -36,7 +36,7 @@ $(document).ready(function() {
        var $metric_id = $(this).data("metric-id");
        var $metric = parseInt($("#"+$metric_id).val(), 10);
         //alert($metric);
-       /* switch($metric)
+        switch($metric)
          {
           case 0 :alert("cft");
                    break;
@@ -46,7 +46,7 @@ $(document).ready(function() {
                    break;
 	   case 3 :alert("sqft");
                    break;
-         }*/
+         }
 
   });
 

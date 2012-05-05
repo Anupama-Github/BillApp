@@ -1,69 +1,98 @@
-<div class="container">
-<p id="notice"><%= notice %></p>
-<%= form_for @bill, :html => { :class => 'well form-inline'} do |f|  %>
+<div class="showbill">
+<%= form_for @bill , :html => { :class => 'well form-inline'} do |f|  %>
 <p>
-   <b>Created on:</b>
-   <%= @bill.created_at.to_s.to(18) %>
-
-  <b>Code:</b>
-  <%= @bill.id + 1001 %>
-
-  <b>Customer Name:</b>
-  <%= @bill.customer_name %>
-
+   
+   <b><%= @bill.created_at.strftime("%a, %d %b %Y") %></b>
+  
+  <span id="showcode"><b>Code:
+  <%= @bill.id + 1001 %></b></span>
+  
+  <span id="customername">
+  <b><%= @bill.customer_name %></b>
+  </span>
   </p>
 
-<table>
+<table class="show">
   <tr>
-    <th>Product Code</th>
-    <th>Product Name</th>
-    <th>Sold Quantity</th>
-    <th>Rate</th>
-    <th>Size</th>
+    <th id="prcode">Product Code</th>
     <th></th>
     <th></th>
     <th></th>
+    <th id="prname">Product Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th id="soldquan">Length</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th id="billrate">Rate</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th id="billsize">Size</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th id="itemamt">Amount</th>
   </tr>
 
 <% @bill.items.each do |item| %>
   <tr>
     <td><%= item.product.code %></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td><%= item.product.name %></td>
-    <td><%= item.sold_qty %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><%= item.length %></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td><%= item.rate %></td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td><%= item.product.size %></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><%= Integer(item.length)*Integer(item.rate)%></td>
   </tr>
 <% end %>
 </table>
 
+</br></br>
+<div class="bill_final_inputs">
+   
+  <div class="total_amount">
+  <b id="amount">Total Amount:
+  <%= @bill.amount %></b>
+  </br>
+  </br>
+  <b id="vat">Vat:
+  <%=@bill.vat %></b>
+   </br>
+   </br>
+  <b id="advance">Advance:
+  <%= @bill.advance %></b>
+  </br>
+  </br>
 
-<p>
-  <b>Amt:</b>
-  <%= @bill.amt %>
+  <b id="advance">Balance:
+  <%= @bill.balance %></b>
 
-  <b>Vat:</b>
-  <%= @bill.vat %>
+  </div>
 
-
-  <b>Vatamt:</b>
-  <%= @bill.vatamt %>
-
-
-
-  <b>Amount:</b>
-  <%= @bill.amount %>
-
-
-  <b>Advance:</b>
-  <%= @bill.advance %>
-
-
-
-  <b>Balance:</b>
-  
-</p>
-
-</div>
 <%= link_to 'Edit', edit_bill_path(@bill) %> |
-<%= link_to 'Back', bills_path %>
+<%= link_to 'Back', bills_path %></br></br>
+ <div class="bill_buttons">
+    <%= submit_tag "Print", :class => "btn dontprint", :onClick => "window.print()" %>
+    <%= submit_tag "Save", :class => "btn-primary dontprint" %>
+ </div>
+
+
 <% end %>
+</div>

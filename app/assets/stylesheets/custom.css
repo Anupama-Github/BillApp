@@ -64,6 +64,7 @@ select,
 .form-inline {
  display: inline-block;
  
+ 
  }
 
 .field{
@@ -111,6 +112,13 @@ select,
   box-shadow:         0px 0px 2px rgba(50, 50, 50, 0.75); 
 }
 
+ .bill_showcode{
+  float: right;
+  margin:0px;
+  padding:0px;
+  display:inline;
+}
+
 div.well.items_area {
   margin-top: 25px;
 }
@@ -119,10 +127,27 @@ div.bill_final_inputs div.total_amount #bill_amount{
   margin-top: 0px;
   
 }
-
+div.bill_final_inputs div.total_amount #amount{
+ margin: 4px;
+ margin-top: 0px;
+ margin-right: 136px;
+ float: right;
+  
+}
+#customername{
+float: right;
+}
 div.bill_final_inputs #bill_advance{
   margin-top: 3px;
   margin-right: -105px;
+  
+}
+div.bill_final_inputs div.total_amount #vat{
+ margin: 4px;
+ margin-top: 3px;
+ margin-right:151px;
+ float: right;
+
   
 }
 
@@ -132,13 +157,33 @@ div.bill_final_inputs #bill_balance{
   margin-right: 2px;
   
 }
+div.bill_final_inputs div.total_amount #advance{
+ margin: 4px;
+ margin-top: 3px;
+ margin-right:136px;
+ float: right;
+
+  
+}
+div.bill_final_inputs div.total_amount #balance{
+ margin: 4px;
+ margin-top: 3px;
+ margin-right:136px;
+ float: right;
+
+  
+}
+
+
 
 div.well.items_area div.items_input_fields {
-  
   margin: 3px;
 }
 
 form#new_bill div.bill_final_inputs input {
+  float: right;
+}
+div.bill_final_inputs input {
   float: right;
 }
 #select01
@@ -182,8 +227,16 @@ color: white;
   -webkit-box-shadow: 0 0 5px#888;
    box-shadow: 0 0 5px #888;
 }
+.show{
+border-collapse:separate;
+border-spacing:12px;
+
+}
 .pagination{
   float:right;
+}
+div.showbill{
+width: 720px;
 }
 #select_category {
     height: 35px;
@@ -193,11 +246,16 @@ color: white;
 
 #error_explanation{
 float:right;
-
-
 }
 
 #logout{
 
 margin-left: 800px;
 }
+#billrate{
+margin-top:20px;
+}
+ #showcode{
+margin-left:45px;
+}
+ 

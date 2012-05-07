@@ -1,18 +1,25 @@
 @media only print {
 
- #company, .dontprint {
+ #company, .dontprint{
     display: none;
   }
     
   .navbar{
     display:none;
    }   
+  .bill_buttons{
+    display:none;
+   }
   
   .well{
    border:0px;
    box-shadow:0 0px 0px;
-   };
+   }
+   
+   .noprint{
+    display:none;
+   }
 
-  a:link, a:visited {background: white; color:white; text-decoration:none;}
+  .total_amont a:link, a:visited {background: white; color:white; text-decoration:none;}
 
 }

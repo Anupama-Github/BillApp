@@ -130,7 +130,7 @@ div.bill_final_inputs div.total_amount #bill_amount{
 div.bill_final_inputs div.total_amount #amount{
  margin: 4px;
  margin-top: 0px;
- margin-right: 136px;
+ margin-right: 39px;
  float: right;
   
 }
@@ -145,7 +145,7 @@ div.bill_final_inputs #bill_advance{
 div.bill_final_inputs div.total_amount #vat{
  margin: 4px;
  margin-top: 3px;
- margin-right:151px;
+ margin-right:63px;
  float: right;
 
   
@@ -160,7 +160,7 @@ div.bill_final_inputs #bill_balance{
 div.bill_final_inputs div.total_amount #advance{
  margin: 4px;
  margin-top: 3px;
- margin-right:136px;
+ margin-right:44px;
  float: right;
 
   
@@ -168,7 +168,7 @@ div.bill_final_inputs div.total_amount #advance{
 div.bill_final_inputs div.total_amount #balance{
  margin: 4px;
  margin-top: 3px;
- margin-right:136px;
+ margin-right:44px;
  float: right;
 
   
@@ -229,14 +229,16 @@ color: white;
 }
 .show{
 border-collapse:separate;
-border-spacing:12px;
+border-spacing:21px;
 
 }
 .pagination{
   float:right;
 }
-div.showbill{
-width: 720px;
+form#showbill {
+width: 836px;
+margin-left:auto;
+margin-right:auto;
 }
 #select_category {
     height: 35px;
@@ -258,4 +260,12 @@ margin-top:20px;
  #showcode{
 margin-left:45px;
 }
- 
+
+span.noprint{
+float:left;
+}
+
+.dontprint{
+float:left;
+}
+

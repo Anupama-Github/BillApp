@@ -35,7 +35,6 @@
     <%= f.text_field :balance, :placeholder => "Balance", :class => "input-small balance_input" %>
   </div>   
   <div class="bill_buttons">
-    <%= submit_tag "Print", :class => "btn dontprint", :onClick => "window.print()" %>
     <%= submit_tag "Save", :class => "btn-primary dontprint" %>
   </div>
 </br></br>

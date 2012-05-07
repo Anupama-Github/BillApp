@@ -83,7 +83,7 @@ $(document).ready(function() {
 
   $('input#bill_vat').live('keyup', function() {
             
-      $('input#bill_amount').val($('input.item_amount').sumValues());
+      $('input#bill_amount').val($('div.items_input_fields input.item_amount').sumValues());
       alert("hi");
       var $bill_amount = parseInt($('input#bill_amount').val(), 10);
       alert($bill_amount);
@@ -104,6 +104,7 @@ $('.datatable').dataTable({
   "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
   "sPaginationType": "bootstrap"
 });
+
 
 
 	

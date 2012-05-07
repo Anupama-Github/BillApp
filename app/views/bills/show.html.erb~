@@ -1,5 +1,4 @@
-<div class="showbill">
-<%= form_for @bill , :html => { :class => 'well form-inline'} do |f|  %>
+<center><%= form_for @bill , :html => { :class => 'well form-inline',:id =>'showbill'} do |f|  %>
 <p>
    
    <b><%= @bill.created_at.strftime("%a, %d %b %Y") %></b>
@@ -12,7 +11,7 @@
   </span>
   </p>
 
-<table id="show">
+<table class="show">
   <tr>
     <th id="prcode">Product Code</th>
     <th></th>
@@ -86,8 +85,10 @@
 
   </div>
 
-<%= link_to 'Edit', edit_bill_path(@bill) %> |
-<%= link_to 'Back', bills_path %></br></br>
+<span class="noprint"><%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Back', bills_path %>
+<%= link_to 'New', new_bill_path %></span></br></br></br></br>
+
  <div class="bill_buttons">
     <%= submit_tag "Print", :class => "btn dontprint", :onClick => "window.print()" %>
     <%= submit_tag "Save", :class => "btn-primary dontprint" %>
@@ -95,4 +96,4 @@
 
 
 <% end %>
-</div>
+</center>

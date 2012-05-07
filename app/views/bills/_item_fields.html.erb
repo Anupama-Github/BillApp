@@ -16,7 +16,7 @@
     
     <%= f.text_field :length, :id => "item_length" + rand_number, :placeholder =>"Length", :class => "input-small item_length", :data => { :rate_id => "item_rate" + rand_number, :amount_id =>  "item_amount" + rand_number, :metric_id =>"product_metric"+rand_number  }  %> 
       
-    <%= f.text_field :no, :placeholder =>"No", :class => "input-small"  %> 
+    <%= f.text_field :no, :placeholder =>"No", :class => "input-small", :id => "item_no"  %> 
         
     <%= text_field_tag :total_amount, nil, :placeholder =>"Total Amount", :class => "input-small item_amount", :id => "item_amount" + rand_number %> 
     

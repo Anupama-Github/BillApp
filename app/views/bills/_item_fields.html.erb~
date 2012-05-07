@@ -12,7 +12,7 @@
     
     <%= f.text_field :sold_qty, :placeholder => "Sold Quantity", :class => "input-small"  %> 
     
-    <%= f.text_field :rate, :id => "item_rate" + rand_number, :placeholder => "Rate", :class => "input-small item_rate", :data => { :length_id => "item_length" + rand_number, :amount_id =>  "item_amount" + rand_number, :metric_id =>"product_metric"+rand_number  }%> 
+    <%= f.text_field :rate, :id => "item_rate" + rand_number, :placeholder => "Rate", :class => "input-small item_rate", :data => { :length_id => "item_length" + rand_number, :amount_id =>  "item_amount" + rand_number, :metric_id =>"product_metric"+rand_number  } %> 
     
     <%= f.text_field :length, :id => "item_length" + rand_number, :placeholder =>"Length", :class => "input-small item_length", :data => { :rate_id => "item_rate" + rand_number, :amount_id =>  "item_amount" + rand_number, :metric_id =>"product_metric"+rand_number  }  %> 
       

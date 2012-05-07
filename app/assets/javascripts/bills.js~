@@ -36,7 +36,7 @@ $(document).ready(function() {
        var $metric_id = $(this).data("metric-id");
        var $metric = parseInt($("#"+$metric_id).val(), 10);
         //alert($metric);
-        switch($metric)
+       /* switch($metric)
          {
           case 0 :alert("cft");
                    break;
@@ -46,7 +46,7 @@ $(document).ready(function() {
                    break;
 	   case 3 :alert("sqft");
                    break;
-         }
+         }*/
 
   });
 
@@ -83,7 +83,7 @@ $(document).ready(function() {
 
   $('input#bill_vat').live('keyup', function() {
             
-      $('input#bill_amount').val($('input.item_amount').sumValues());
+      $('input#bill_amount').val($('div.items_input_fields input.item_amount').sumValues());
       alert("hi");
       var $bill_amount = parseInt($('input#bill_amount').val(), 10);
       alert($bill_amount);

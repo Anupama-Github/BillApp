@@ -30,7 +30,6 @@ module ApplicationHelper
     
   end
   
-
   def add_hour_and_min
     Time.now.hour.to_s + Time.now.min.to_s + Time.now.sec.to_s
   end

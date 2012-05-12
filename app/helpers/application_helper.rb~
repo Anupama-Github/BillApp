@@ -26,10 +26,17 @@ module ApplicationHelper
     end
     
     
-     link_to_function(name, "add_fields(this, \"#{association}\", \"#{escape_javascript(fields)}\")",'0')
+     link_to_function(name, "add_fields(this, \"#{association}\", \"#{escape_javascript(fields)}\")")
     
-     end
+  end
+  def rand_number
+  rand_number = rand(100000).to_s
+   return rand_number
   end
 
+  def add_hour_and_min
+    Time.now.hour.to_s + Time.now.min.to_s + Time.now.sec.to_s
+  end
+end
 
 

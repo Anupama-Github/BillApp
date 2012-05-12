@@ -1,8 +1,9 @@
-1335948840
+1336729880
 AddCategoryToProducts	/home/mer/rails/BillApp/db/migrate/20120418123523_add_category_to_products.rb	class AddCategoryToProducts 
 AddColumnsToItemsaddColumn	/home/mer/rails/BillApp/db/migrate/20120411065403_add_columns_to_itemsadd_column.rb	class AddColumnsToItemsaddColumn 
 AddCostToStock	/home/mer/rails/BillApp/db/migrate/20120404111840_add_cost_to_stock.rb	class AddCostToStock 
 AddCustomerToBills	/home/mer/rails/BillApp/db/migrate/20120422034700_add_customer_to_bills.rb	class AddCustomerToBills 
+AddDeviseToUsers	/home/mer/rails/BillApp/db/migrate/20120504044126_add_devise_to_users.rb	class AddDeviseToUsers 
 AddDimensionsToItems	/home/mer/rails/BillApp/db/migrate/20120423093958_add_dimensions_to_items.rb	class AddDimensionsToItems 
 AddVatToItems	/home/mer/rails/BillApp/db/migrate/20120427070841_add_vat_to_items.rb	class AddVatToItems 
 Application	/home/mer/rails/BillApp/config/application.rb	  class Application 
@@ -16,6 +17,7 @@ BillsControllerTest	/home/mer/rails/BillApp/test/functional/bills_controller_tes
 BillsHelper	/home/mer/rails/BillApp/app/helpers/bills_helper.rb	module BillsHelper
 BillsHelperTest	/home/mer/rails/BillApp/test/unit/helpers/bills_helper_test.rb	class BillsHelperTest 
 BrowsingTest	/home/mer/rails/BillApp/test/performance/browsing_test.rb	class BrowsingTest 
+ChangeVatInBill	/home/mer/rails/BillApp/db/migrate/20120505120002_change_vat_in_bill.rb	class ChangeVatInBill 
 CreateBills	/home/mer/rails/BillApp/db/migrate/20120404043447_create_bills.rb	class CreateBills 
 CreateCustomers	/home/mer/rails/BillApp/db/migrate/20120403120819_create_customers.rb	class CreateCustomers 
 CreateItems	/home/mer/rails/BillApp/db/migrate/20120404111417_create_items.rb	class CreateItems 
@@ -79,12 +81,13 @@ change	/home/mer/rails/BillApp/db/migrate/20120423092510_remove_columns_from_ite
 change	/home/mer/rails/BillApp/db/migrate/20120427070841_add_vat_to_items.rb	  def change
 change	/home/mer/rails/BillApp/db/migrate/20120404111417_create_items.rb	  def change
 change	/home/mer/rails/BillApp/db/migrate/20120404043447_create_bills.rb	  def change
+change	/home/mer/rails/BillApp/db/migrate/20120505120002_change_vat_in_bill.rb	  def change
 clearMenus	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap.js	function clearMenus()
 create	/home/mer/rails/BillApp/app/controllers/customers_controller.rb	  def create
 create	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def create
 create	/home/mer/rails/BillApp/app/controllers/items_controller.rb	  def create
-create	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def create
 create	/home/mer/rails/BillApp/app/controllers/bills_controller.rb	  def create
+create	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def create
 customer_name	/home/mer/rails/BillApp/app/models/bill.rb	  def customer_name
 customer_name=	/home/mer/rails/BillApp/app/models/bill.rb	  def customer_name=(name)
 customer_phoneno	/home/mer/rails/BillApp/app/models/bill.rb	  def customer_phoneno
@@ -92,14 +95,15 @@ customer_phoneno=	/home/mer/rails/BillApp/app/models/bill.rb	  def customer_phon
 destroy	/home/mer/rails/BillApp/app/controllers/customers_controller.rb	  def destroy
 destroy	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def destroy
 destroy	/home/mer/rails/BillApp/app/controllers/items_controller.rb	  def destroy
-destroy	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def destroy
 destroy	/home/mer/rails/BillApp/app/controllers/bills_controller.rb	  def destroy
+destroy	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def destroy
 down	/home/mer/rails/BillApp/db/migrate/20120316195056_create_rails_admin_histories_table.rb	  def self.down
+down	/home/mer/rails/BillApp/db/migrate/20120504044126_add_devise_to_users.rb	  def self.down
 edit	/home/mer/rails/BillApp/app/controllers/customers_controller.rb	  def edit
 edit	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def edit
 edit	/home/mer/rails/BillApp/app/controllers/items_controller.rb	  def edit
-edit	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def edit
 edit	/home/mer/rails/BillApp/app/controllers/bills_controller.rb	  def edit
+edit	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def edit
 enter	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap-twipsy.js	function enter()
 escape	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap.js	function escape()
 extractLast	/home/mer/rails/BillApp/app/assets/javascripts/autocomplete-rails.js	function extractLast( term )
@@ -112,15 +116,15 @@ index	/home/mer/rails/BillApp/app/controllers/home_controller.rb	  def index
 index	/home/mer/rails/BillApp/app/controllers/customers_controller.rb	  def index
 index	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def index
 index	/home/mer/rails/BillApp/app/controllers/items_controller.rb	  def index
-index	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def index
 index	/home/mer/rails/BillApp/app/controllers/bills_controller.rb	  def index
+index	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def index
 leave	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap-twipsy.js	function leave()
 link_to_add_fields	/home/mer/rails/BillApp/app/helpers/application_helper.rb	  def link_to_add_fields(name, f, association)
 new	/home/mer/rails/BillApp/app/controllers/customers_controller.rb	  def new
 new	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def new
 new	/home/mer/rails/BillApp/app/controllers/items_controller.rb	  def new
-new	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def new
 new	/home/mer/rails/BillApp/app/controllers/bills_controller.rb	  def new
+new	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def new
 next	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap.js	function next()
 product_category	/home/mer/rails/BillApp/app/models/item.rb	 def product_category
 product_category=	/home/mer/rails/BillApp/app/models/item.rb	 def product_category=(category)
@@ -139,8 +143,8 @@ setState	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap-buttons.js	fun
 show	/home/mer/rails/BillApp/app/controllers/customers_controller.rb	  def show
 show	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def show
 show	/home/mer/rails/BillApp/app/controllers/items_controller.rb	  def show
-show	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def show
 show	/home/mer/rails/BillApp/app/controllers/bills_controller.rb	  def show
+show	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def show
 showold	/home/mer/rails/BillApp/app/controllers/bills_controller.rb	  def showold
 sort_column	/home/mer/rails/BillApp/app/controllers/items_controller.rb	   def sort_column
 sort_direction	/home/mer/rails/BillApp/app/controllers/items_controller.rb	   def sort_direction
@@ -150,8 +154,9 @@ split	/home/mer/rails/BillApp/app/assets/javascripts/autocomplete-rails.js	funct
 test_homepage	/home/mer/rails/BillApp/test/performance/browsing_test.rb	  def test_homepage
 toggle	/home/mer/rails/BillApp/app/assets/javascripts/bootstrap-buttons.js	function toggle(el)
 up	/home/mer/rails/BillApp/db/migrate/20120316195056_create_rails_admin_histories_table.rb	   def self.up
+up	/home/mer/rails/BillApp/db/migrate/20120504044126_add_devise_to_users.rb	  def self.up
 update	/home/mer/rails/BillApp/app/controllers/customers_controller.rb	  def update
 update	/home/mer/rails/BillApp/app/controllers/stocks_controller.rb	  def update
 update	/home/mer/rails/BillApp/app/controllers/items_controller.rb	  def update
-update	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def update
 update	/home/mer/rails/BillApp/app/controllers/bills_controller.rb	  def update
+update	/home/mer/rails/BillApp/app/controllers/products_controller.rb	  def update

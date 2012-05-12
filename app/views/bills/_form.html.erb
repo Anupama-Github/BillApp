@@ -17,7 +17,7 @@
   <div class="well items_area">
     <%= f.fields_for :items do |fi| %>
      <%= render 'item_fields', :f => fi %>
-     <% end %>
+    <% end %>
      
   </div>
   <div class="btn dontprint"><%= link_to_add_fields 'Add new',f,:items %>   </div>
@@ -33,8 +33,9 @@
     </br>
     </br>
     <%= f.text_field :balance, :placeholder => "Balance", :class => "input-small balance_input" %>
-  </div>   
-  <div class="bill_buttons">
+  </div> 
+  
+   <div class="bill_buttons">
     <%= submit_tag "Save", :class => "btn-primary dontprint" %>
   </div>
 </br></br>

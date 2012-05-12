@@ -22,6 +22,8 @@
 //=require home
 //=require items
 //=require jquery.purr
+//=require jquery.hotkeys
+//=require jquery-1.4.2
 //=require twitter/bootstrap
 //= require dataTables/jquery.dataTables
 //= require dataTables/jquery.dataTables.bootstrap
